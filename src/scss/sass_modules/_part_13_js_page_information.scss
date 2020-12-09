@@ -1,0 +1,287 @@
+.page_item_info{
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999;
+  padding: 10%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.7);
+  display: none;
+  z-index: 10000000000000 !important;
+
+
+  @media screen and(max-width: 620px){
+    padding: 2%;
+  }
+  @media screen and(max-width: 376px){
+    padding: 5% !important;
+  }
+
+
+
+
+  .content_page_info{
+    @include box;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #fff;
+    @include shadowBox;
+    display: flex;
+    flex-direction: row;
+
+    @media screen and(max-width: 768px){
+      flex-direction: column;
+      min-height: 300px;
+    }
+
+
+
+
+    .content_page_info_box_left{
+      @include box;
+      border: 1px solid gray;
+      height: 100%;
+      width: 30%;
+      padding: 30px;
+      font-family: 'myriadpro-regular';
+      color: gray !important;
+      text-align: justify;
+      line-height: 18px;
+      overflow: auto;
+      font-size: 15px;
+
+      @media screen and(max-width: 769px){
+        height: 40%;
+      }
+
+      @media screen and(max-width: 426px){
+        font-size: 12px;
+        padding: 10px;
+        line-height: 13px;
+      }
+
+
+      .spanFirst{
+        font-family: 'Audiowide';
+        color: $color;
+        margin-right: 5px;
+      }
+
+
+      .des_page_info{
+        margin-top: 10px;
+
+        @media screen and(max-width: 426px){
+          margin-top: 0px;
+        }
+      }
+      .button_buy{
+        display: block;
+        position: absolute;
+        border-radius: 5px;
+        color: $color;
+        font-size: 15px;
+        font-family: 'Audiowide';
+        bottom: 50px;
+        width: 100px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s;
+        padding: 5px;
+        z-index: 100;
+        @include touch;
+        @include box;
+
+        @media screen and(max-width: 1025px){
+          right: 30px;
+        }
+        @media screen and(max-width: 426px){
+          left: 10%;
+          bottom: 30px;
+        }
+        &:hover{
+          background: #F4E4CB;
+        }
+      }
+
+
+      @media screen and(max-width: 768px){
+        width: 100%;
+        height: 30%;
+      }
+    }
+
+
+
+    .content_page_info_box_right{
+      @include box;
+      border: 1px solid black;
+      height: 100%;
+      width: 70%;
+      padding: 10px;
+      background-image: url(../images/7_shoe_item_1.png);
+      -webkit-background-size: 80%;
+      background-size: 80%;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      z-index: 1;
+
+      @media screen and(max-width: 768px){
+        width: 100%;
+        height: 60%;
+      }
+
+      .main_price_shoe_page_info, .first_price_shoe_page_info, .sale_price_shoe_page_info{
+        font-family: "TruenoLt";
+        position: relative;
+        left: 20px;
+      }
+      .main_price_shoe_page_info{
+        font-size: 28px;
+        color: #ff7270;
+        position: relative;
+        top: 30px;
+
+        @media screen and(max-width: 426px){
+          font-size: 21px;
+          top: 10px;
+          left: 15px;
+        }
+      }
+      .first_price_shoe_page_info{
+        color: gray;
+        font-size: 15px;
+        text-decoration: line-through;
+        top: 35px;
+
+        @media screen and(max-width: 426px){
+          top: 15px;
+          left: 15px;
+        }
+      }
+      .sale_price_shoe_page_info{
+        top: 40px;
+        left: 20px;
+        width: 100px;
+        height: 50px;
+        background: #ff7270;
+        color: #FFFFFF;
+        text-align: center;
+        line-height: 45px;
+        font-size: 29px;
+
+        @media screen and(max-width: 426px){
+          top: 20px;
+          left: 15px;
+          width: 50px;
+          height: 25px;
+          font-size: 15px;
+          line-height: 20px;
+        }
+      }
+
+
+      //
+      //.main_coast_shoe{
+      //  font-size: 23px;
+      //  color: #ff7270;
+      //}
+      //.down_coast_shoe{
+      //  color: grey;
+      //  font-size: 18px;
+      //  margin-top: 5px;
+      //  text-decoration: line-through;
+      //}
+      //.boxSale{
+      //  width: 25%;
+      //  height: 30px;
+      //  float: right;
+      //  top: 7%;
+      //  right: -8px;
+      //  position: absolute;
+      //  text-align: center;
+      //  line-height: 30px;
+      //  color: #fff;
+      //  background: #ff7270;
+
+
+      .exit_button{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        @include shadowBox;
+        display: flex;
+        padding: 5px;
+        box-sizing: border-box;
+        justify-content: space-between;
+        transition: 0.3s;
+        cursor: pointer;
+        z-index: 100;
+
+        @media screen and(max-width: 769px){
+          width: 30px;
+          height: 30px;
+          //top: -240px;
+        }
+        @media screen and(max-width: 426px){
+          width: 25px;
+          height: 25px;
+          //top: -295px;
+        }
+
+
+        &:hover{
+          justify-content: center;
+          @include untouch;
+          top: 12px;
+          right: 12px;
+
+          @media screen and(max-width: 768px){
+            @include touch;
+            //top: -243px;
+            right: 17px;
+          }
+          @media screen and(max-width: 426px){
+            @include touch;
+            //top: -298px;
+          }
+        }
+        &:hover > .lineOne{
+          transform: rotate(45deg);
+          position: absolute;
+          margin-top: -1px;
+        }
+        &:hover > .lineSecond{
+          transform: rotate(-45deg);
+          position: absolute;
+          margin-top: -1px;
+        }
+
+        .lineOne, .lineSecond{
+          margin-top: 5%;
+          transition: 0.3s;
+          position: relative;
+          width: 5px;
+          height: 80%;
+          background: $color;
+
+          @media screen and(max-width: 768px){
+            width: 2px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+
