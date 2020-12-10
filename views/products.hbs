@@ -1,1 +1,56 @@
-<h2>{{title}}</h2>
+<div class="jsItem_box" id="jsItem_box">
+    <div class="jsItem_box_wrap" id="jsItem_box_wrap">
+        <div class="search_content">
+            <div class="search_content_center">
+                <input type="search " class="search" id="search" placeholder="Search">
+                <button class="btn_search" id="btn_search">Search</button>
+            </div>
+        </div>
+
+        <div class="option_content">
+            <div class="btn_option_box">
+                <div class="btn_option" id="buttom_all">All</div>
+            </div>
+            <div class="btn_option_box">
+                <div class="btn_option" id="buttom_man">MAN</div>
+            </div>
+            <div class="btn_option_box">
+                <div class="btn_option" id="buttom_woman">WOMAN</div>
+            </div>
+            <div class="btn_option_box">
+                <div class="btn_option" id="buttom_children">CHILDREN</div>
+            </div>
+            <div class="btn_option_box">
+                <div class="btn_option" id="buttom_test">TEST</div>
+            </div>
+
+        </div>
+
+        <div class="range_content" id="range_content">
+            {{#if products.length}}
+                <div class="range_content_box" id="range_content_box">
+<!--                    {{#each products}}-->
+<!--                        <div class="box_shoe" style="background-image: url('css/images/{{imgUrl}}')">-->
+<!--                            <p class="main_coast_shoe">${{price}}</p>-->
+<!--                            {{#if priceDown}}-->
+<!--                                <p class="down_coast_shoe">${{priceDown}}</p>-->
+<!--                            {{/if}}-->
+<!--                            <p class="sex_box_shoe">{{sex}}</p>-->
+<!--                            <h5 class="name_box_shoe">{{title}}</h5>-->
+<!--                            {{#if boxSale}}-->
+<!--                                <div class="boxSale">{{boxSale}}%</div>-->
+<!--                            {{/if}}-->
+<!--                            <div class="show_more" data-name="{{id}}">show more</div>-->
+<!--                        </div>-->
+<!--                    {{/each}}-->
+                </div>
+            {{else}}
+                <p>Nothing to show</p>
+            {{/if}}
+            <!--            <p class="amountItem" id="amountItem"></p>-->
+            <!--            <div class="range_content_box" id="range_content_box"></div>-->
+            <!--            <div class="pag_box" id="pag_box"></div>-->
+        </div>
+
+    </div>
+</div>

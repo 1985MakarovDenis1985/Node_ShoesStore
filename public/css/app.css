@@ -2092,13 +2092,13 @@ label {
     padding: 15px 0 0 10px
 }
 
-.option_content .buttom_option_box {
+.option_content .btn_option_box {
     width: 100%;
     height: 70px;
     margin-bottom: 10px
 }
 
-.option_content .buttom_option {
+.option_content .btn_option {
     cursor: pointer;
     width: 85%;
     height: 80%;
@@ -2169,7 +2169,7 @@ label {
 .search_content .search_content_center .search {
     display: block;
     width: 350px;
-    height: 60px !important;
+    height: 60px ;
     outline: none;
     border: 2px solid #623232;
     border-radius: 5px
@@ -5743,7 +5743,7 @@ i:hover {
         width: 30%
     }
 
-    .option_content .buttom_option {
+    .option_content .btn_option {
         font-size: 17px
     }
 
@@ -6331,8 +6331,88 @@ i:hover {
 }
 
 
+
+
 /*изменить*/
 .nav_item{
     animation-delay: 0s!important;
     animation-duration: 0s!important;
+}
+
+.jsItem_box_wrap{
+    width: 1220px!important;
+    margin: auto!important;
+    position: relative!important;
+    margin: 0!important;
+}
+
+@media screen and (max-width: 1024px) {
+    .jsItem_box_wrap {
+        width: 1000px !important
+    }
+}
+@media screen and (max-width: 768px) {
+    .jsItem_box_wrap {
+        width: 760px !important
+    }
+}
+
+.jsItem_box{
+    display: flex;
+    justify-content: center;
+    top: 0!important;
+    background: transparent !important;
+    position:  relative !important;
+}
+
+.option_content .btn_option{
+    height: 80% !important;
+    margin: 0!important;
+}
+.option_content{
+    width: 10%;
+}
+
+.header_undernav_wrap{
+    position: relative!important;
+}
+
+.btn_option, .search, .btn_search{
+    font-size: 15px!important;
+    box-shadow: -1px 1px #472424, -2px 1px #613131, -2px 2px #462323, -3px 2px #603030, -3px 3px #452222, -4px 3px #5f2f2f!important;
+}
+
+
+.search_content{
+    height: 10%!important;
+}
+
+.search{
+    height: 50% !important;
+}
+
+.btn_search{
+    height: 50% !important
+}
+
+.btn_option{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100% !important;
+    height: 100% !important;
+    font-size: 13px!important;
+}
+
+.btn_option_box{
+    margin-bottom: 0!important;
+}
+
+.btn_option_box{
+    height: 6% !important;
+    width: 100% !important;
+}
+
+.range_content{
+    /*display: block!important;*/
 }

@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d5d5f8e-18f9-4c22-b5ef-10f5f0bfae86" name="Default Changelist" comment="" />
+    <list default="true" id="0d5d5f8e-18f9-4c22-b5ef-10f5f0bfae86" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/db/products.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/tempProduct.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/add.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/add.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/slick-1.8.1/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/slick-1.8.1/bower.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/slick-1.8.1/component.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/slick-1.8.1/component.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/slick-1.8.1/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/slick-1.8.1/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/slick-1.8.1/slick.jquery.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/slick-1.8.1/slick.jquery.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/slick-1.8.1/bower.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/component.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/slick-1.8.1/component.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/slick-1.8.1/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/slick.jquery.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/slick-1.8.1/slick.jquery.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/footer.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/footer.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/navbar.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/navbar.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/products.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/products.hbs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,16 +36,22 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="package.json" />
         <option value="JavaScript File" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1lNyEeLvBcKdSHrmgN23hQg34NS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -32,8 +63,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/css" />
       <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/views" />
+      <recent name="$PROJECT_DIR$/public/css" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -45,11 +77,22 @@
       <option name="presentableId" value="Default" />
       <updated>1607451734316</updated>
       <workItem from="1607451735940" duration="14536000" />
-      <workItem from="1607518792878" duration="1763000" />
+      <workItem from="1607518792878" duration="22632000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

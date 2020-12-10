@@ -1,5 +1,5 @@
 {
-  "name": "slick-carousel",
+  "title": "slick-carousel",
   "version": "1.8.1",
   "description": "the last carousel you'll ever need",
   "main": "slick/slick.js",
@@ -17,26 +17,26 @@
   "author": "Ken Wheeler <ken_wheeler@me.com>",
   "contributors": [
     {
-      "name": "ken wheeler",
+      "title": "ken wheeler",
       "email": "ken_wheeler@me.com",
       "url": "http://kenwheeler.github.io/"
     },
     {
-      "name": "simon goellner",
+      "title": "simon goellner",
       "email": "simey.me@gmail.com",
       "url": "http://simey.me"
     },
     {
-      "name": "ahmad el-alfy",
+      "title": "ahmad el-alfy",
       "email": "ahmadalfy@gmail.com",
       "url": "http://www.alfy.me"
     },
     {
-      "name": "leggomuhgreggo",
+      "title": "leggomuhgreggo",
       "email": "gwestneat@gmail.com"
     },
     {
-      "name": "ashley mcknight",
+      "title": "ashley mcknight",
       "email": "ash@sharpteef.net"
     }
   ],
