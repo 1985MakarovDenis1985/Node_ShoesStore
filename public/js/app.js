@@ -1,4 +1,5 @@
-const btn = document.getElementById("btn_search")
+// const axios = require('axios')
+// import axios from 'axios'
 let current = 0;
 const per_page = 6
 
@@ -38,9 +39,39 @@ function createCard(product) {
     let sex = createNewElement("p", "sex_box_shoe", product.sex, null);
     let title = createNewElement("h5", "name_box_shoe", product.title);
 
-    let showItem = createNewElement("div", "show_more", "show more", [{
+    // let inputAdd = createNewElement('input', null, null, [
+    //     {
+    //         "name": "type",
+    //         "value": 'hidden'
+    //     }, {
+    //         "name": "value",
+    //         "value": product.id
+    //     }, {
+    //         "name": "name",
+    //         "value": "id"
+    //     }
+    // ])
+    // let btnAddToCard = createNewElement('button', "show_more_btn", "show more", [
+    //     {
+    //         "name": "type",
+    //         "value": 'submit'
+    //     }
+    // ])
+    // let showItem = appChild(createNewElement('form', "show_more", null, [{
+    //     "name": "action",
+    //     "value": '/card/add'
+    // }, {
+    //     "name": "method",
+    //     "value": "POST"
+    // }], null), [inputAdd, btnAddToCard])
+
+
+    let showItem = createNewElement("a", "show_more", "show more", [{
         "name": "data-id",
         "value": product.id
+    },{
+        "name": "href",
+        "value": '/products/'+product.id
     }], null)
 
     let shoeBoxFull = appChild(shoeBox, [coast, coastDown, sex, title, boxSale, showItem])
@@ -49,7 +80,7 @@ function createCard(product) {
 
 function render(products) {
     const productsBox = document.getElementById('range_content_box')
-    productsBox.innerHTML ='';
+    productsBox.innerHTML = '';
     const from = current * per_page
     const to = current * per_page + per_page
     products.slice(from, to).map(el => {
@@ -59,33 +90,69 @@ function render(products) {
 
 function renderPag(products) {
     const paginationBox = document.getElementById("pag_box");
+    // pagItem.map(el => el.classList.remove('active_pag'))
+
     paginationBox.innerHTML = "";
-    for (let i = 0; i < Math.ceil(prod.length / per_page); i++) {
-        paginationBox.appendChild(Builder.createNewElement("div", "pag_item", i + 1, [{
-            "name": "data-name",
+    for (let i = 0; i < Math.ceil(products.length / per_page); i++) {
+        paginationBox.appendChild(createNewElement("div", "pag_item", i + 1, [{
+            "name": "data-number",
             "value": i
         }]));
     }
-    if (prod.length > 0) {
-        paginationBox.firstChild.classList.add("active_pag")
-    }
+    const pagItem = Array.from(document.getElementsByClassName('pag_item'))
+    pagItem[current].classList.add('active_pag')
+    pagItem.map(el => {
+        el.addEventListener('click', (e) => {
+            pagItem.map(el => el.classList.remove('active_pag'))
+            current = +e.target.dataset.number
+            render(products)
+            pagItem[current].classList.add('active_pag')
+        })
+    })
 }
 
-if (btn) {
-    // btn.addEventListener('click', () => {
-        fetch('/products/all')
-            .then(data => data.json())
-            .then((data) => {
+async function getProducts(sex) {
+    current = 0
+   const prod = await fetch(`/products/all`)
+       .then(data => data.json())
+        .then((data) => {
+            if (sex){
+                const a = data.filter(el => el.sex === sex)
+                render(a)
+                renderPag(a)
+            }
+            else {
                 render(data)
-                current +=4;
-                console.log(current)
+                renderPag(data)
+            }
 
+        })
 
-                // const productBox = document.getElementById('range_content_box')
-                // productBox.appendChild(BuilderComponent.createCard(prod[i]))
-
-            })
-    // })
 }
+
+// setTimeout(() => {
+
+    const btn = document.getElementById("range_content_box")
+    if (btn) {
+        getProducts()
+    //
+        document.getElementById('getAll').addEventListener('click', () => {
+            getProducts()
+        })
+        document.getElementById('getMen').addEventListener('click', () => {
+            getProducts('man')
+        })
+        document.getElementById('getWomen').addEventListener('click', () => {
+            getProducts('woman')
+        })
+        document.getElementById('getChildren').addEventListener('click', () => {
+            getProducts('children')
+        })
+    }
+// }, 500)
+
+
+
+
 
 

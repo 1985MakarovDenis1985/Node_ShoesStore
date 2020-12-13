@@ -1,0 +1,50 @@
+{
+  "products": [
+    {
+      "title": "Convers Breakpoint",
+      "price": 100.5,
+      "priceDown": 245,
+      "boxSale": "",
+      "sex": "man",
+      "imgUrl": "shoe_item_1.png",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias aliquid autem nesciunt officiis quam tenetur ullam? Asperiores, ex explicabo iure magnam molestias mollitia nostrum odio quam, quas similique tenetur.",
+      "size": [
+        39,
+        41
+      ],
+      "id": "bbf09344-ed42-4c00-9262-d377b1802fc9",
+      "count": 81
+    },
+    {
+      "title": "Adidas Originals II",
+      "price": 180.5,
+      "priceDown": false,
+      "boxSale": "",
+      "sex": "woman",
+      "imgUrl": "shoe_item_4.png",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias aliquid autem nesciunt officiis quam tenetur ullam? Asperiores, ex explicabo iure magnam molestias mollitia nostrum odio quam, quas similique tenetur.",
+      "size": [
+        43,
+        45
+      ],
+      "id": "8e6de1e0-da54-4a67-9202-7b9fa02fc59d",
+      "count": 1
+    },
+    {
+      "title": "Convers Breakpoint",
+      "price": 180.5,
+      "priceDown": 425,
+      "boxSale": 15,
+      "sex": "children",
+      "imgUrl": "shoe_item_5.png",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias aliquid autem nesciunt officiis quam tenetur ullam? Asperiores, ex explicabo iure magnam molestias mollitia nostrum odio quam, quas similique tenetur.",
+      "size": [
+        33,
+        34
+      ],
+      "id": "fea8eaf5-b683-4d3d-8f75-986ea376e197",
+      "count": 1
+    }
+  ],
+  "price": 10491
+}

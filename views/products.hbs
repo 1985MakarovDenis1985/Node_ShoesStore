@@ -9,19 +9,16 @@
 
         <div class="option_content">
             <div class="btn_option_box">
-                <div class="btn_option" id="buttom_all">All</div>
+                <div class="btn_option" id="getAll">All</div>
             </div>
             <div class="btn_option_box">
-                <div class="btn_option" id="buttom_man">MAN</div>
+                <div class="btn_option" id="getMen">MAN</div>
             </div>
             <div class="btn_option_box">
-                <div class="btn_option" id="buttom_woman">WOMAN</div>
+                <div class="btn_option" id="getWomen">WOMAN</div>
             </div>
             <div class="btn_option_box">
-                <div class="btn_option" id="buttom_children">CHILDREN</div>
-            </div>
-            <div class="btn_option_box">
-                <div class="btn_option" id="buttom_test">TEST</div>
+                <div class="btn_option" id="getChildren">CHILDREN</div>
             </div>
 
         </div>
@@ -29,21 +26,30 @@
         <div class="range_content" id="range_content">
             {{#if products.length}}
                 <div class="range_content_box" id="range_content_box">
-<!--                    {{#each products}}-->
-<!--                        <div class="box_shoe" style="background-image: url('css/images/{{imgUrl}}')">-->
-<!--                            <p class="main_coast_shoe">${{price}}</p>-->
-<!--                            {{#if priceDown}}-->
-<!--                                <p class="down_coast_shoe">${{priceDown}}</p>-->
-<!--                            {{/if}}-->
-<!--                            <p class="sex_box_shoe">{{sex}}</p>-->
-<!--                            <h5 class="name_box_shoe">{{title}}</h5>-->
-<!--                            {{#if boxSale}}-->
-<!--                                <div class="boxSale">{{boxSale}}%</div>-->
-<!--                            {{/if}}-->
-<!--                            <div class="show_more" data-name="{{id}}">show more</div>-->
-<!--                        </div>-->
-<!--                    {{/each}}-->
+
+                    {{#each products}}
+                        <div class="box_shoe" style="background-image: url('css/images/{{imgUrl}}')">
+                            <p class="main_coast_shoe">${{price}}</p>
+                            {{#if priceDown}}
+                                <p class="down_coast_shoe">${{priceDown}}</p>
+                            {{/if}}
+                            <p class="sex_box_shoe">{{sex}}</p>
+                            <h5 class="name_box_shoe">{{title}}</h5>
+                            {{#if boxSale}}
+                                <div class="boxSale">{{boxSale}}%</div>
+                            {{/if}}
+                            <div class="show_more">
+                                <a href="/products/{{id}}" style="color: white">Open the course</a>
+                                <!--                                <form action="/card/add" method="POST">-->
+                                <!--                                    <input type="hidden"  name="id" value="{{id}}" >-->
+                                <!--                                    <button type="submit" class="btn btn-primary">Byu</button>-->
+                                <!--                                </form>-->
+                            </div>
+                        </div>
+                    {{/each}}
+
                 </div>
+                <div class="pag_box" id="pag_box"></div>
             {{else}}
                 <p>Nothing to show</p>
             {{/if}}

@@ -3,13 +3,13 @@ const fs = require('fs')
 const path = require('path')
 
 class Product {
-    constructor(title, price, priceDown, boxSale, sex, imgEl, desc, size) {
+    constructor(title, price, priceDown, boxSale, sex, imgEl, desc, size=[]) {
         this.title = title,
             this.price = price,
             this.priceDown = priceDown,
             this.boxSale = boxSale,
             this.sex = sex,
-            this.imgEl = imgEl,
+            this.imgUrl = imgEl,
             this.desc = desc,
             this.size = size,
             this.id = uuidv4()
@@ -24,7 +24,7 @@ class Product {
             sex: this.sex,
             imgUrl: this.imgUrl,
             desc: this.desc,
-            size: this.size,
+            size: [this.size],
             id: this.id
         }
     }
@@ -61,7 +61,10 @@ class Product {
         })
     }
 
-
+    static async getById(id){
+        const products = await Product.getAll()
+        return products.find(el => el.id === id)
+    }
 }
 
 module.exports = Product
