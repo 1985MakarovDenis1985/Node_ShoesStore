@@ -2,32 +2,206 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d5d5f8e-18f9-4c22-b5ef-10f5f0bfae86" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db/card.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/users.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/new_app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/about.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/about.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/card.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/layouts/empty.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/product.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/test.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/tempProduct.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/card.json" beforeDir="false" afterPath="$PROJECT_DIR$/db/card.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/db/products.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/card.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/card.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/new_app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/new_app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/add.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/slick-1.8.1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/slick-1.8.1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/slick-1.8.1/slick/slick-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/slick-1.8.1/slick/slick-theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/slick.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/slick.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/card.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/card.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/add.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/add.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/main.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/main.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/loginPage.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/loginPage.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Audiowide/Audiowide-Regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Audiowide/Audiowide-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Audiowide/Audiowide-Regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Montserrat/Montserrat-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Montserrat/Montserrat-BlackItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Montserrat/Montserrat-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Montserrat/Montserrat-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Montserrat/Montserrat-ExtraBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Montserrat/Montserrat-ExtraLight.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Montserrat/Montserrat-ExtraLightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Montserrat/Montserrat-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Montserrat/Montserrat-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Montserrat/Montserrat-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Montserrat/Montserrat-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Montserrat/Montserrat-MediumItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Montserrat/Montserrat-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Montserrat/Montserrat-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Montserrat/Montserrat-SemiBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Montserrat/Montserrat-Thin.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Montserrat/Montserrat-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Montserrat/Montserrat-Thin.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Montserrat/Montserrat-ThinItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/Montserrat/OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/MyriadPro/MyriadPro-Bold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/MyriadPro/MyriadPro-BoldCond.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/MyriadPro/MyriadPro-BoldCondIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/MyriadPro/MyriadPro-BoldIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/MyriadPro/MyriadPro-Cond.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/MyriadPro/MyriadPro-CondIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/MyriadPro/MyriadPro-It.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/MyriadPro/MyriadPro-Regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/MyriadPro/MyriadPro-Regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/MyriadPro/MyriadPro-Regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/MyriadPro/MyriadPro-Semibold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/MyriadPro/MyriadPro-SemiboldIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/MyriadPro/myriadpro-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoBd.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoBd.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoBd.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoBd.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoBdIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoBdOl.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoBdOl.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoBdOl.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoBdOl.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoBdOlIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoBlk.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoBlkIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoBlkOl.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoBlkOlIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoExBd.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoExBdIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoExBdOl.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoExBdOlIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoLt.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoLt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoLt.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoLt.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoLtIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoRg.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoRgIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoSBd.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoSBd.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoSBd.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoSBd.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoSBdIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoUltLt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/TruenoUltLtIt.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/trueno/sharefonts.net.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/10_shoe_item_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/11_shoe_item_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/12_shoe_item_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/13_shoe_item_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/14_shoe_item_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/15_sprite_brands.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/16_bg_posts.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/16_bg_posts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/17_bg_posts_comment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/18_post_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/19_man.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/1_shoe_first.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/1_shoe_first_temp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/20_woman.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/26_footer_sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/27_footer_sprite_second.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/28_news.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/29_jog.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/2_shoe_third_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/2_shoe_third_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/3_shoe_third_add.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/4_shoe_second.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/5_shoe_fourth.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/5_shoe_fourth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/6_shoe_fift.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/6_shoe_fift.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/7_shoe_item_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/8_shoe_item_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/9_shoe_item_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/9shoe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/footer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/icon_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/line_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/shoe_ico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/shoe_item_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/shoe_item_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/shoe_item_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/shoe_item_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/shoe_item_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/shoe_item_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/shoe_item_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/shoe_item_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/slider_1_sneakers_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/slider_1_sneakers_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/slider_2_sneakers_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/slider_2_sneakers_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/slider_3_sneakers_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/slider_3_sneakers_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/slider_4_sneakers_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/slider_4_sneakers_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/slider_5_sneakers_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/slider_5_sneakers_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/content.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/es5-sham.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/es5-shim.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/build.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/forms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/optionSexProd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/test_login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/CONTRIBUTING.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/ISSUE_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/README.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/component.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/slick.jquery.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/slick/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/slick/config.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/slick/fonts/slick.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/slick/fonts/slick.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/slick/fonts/slick.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/slick/fonts/slick.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/slick/slick-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/slick/slick-theme.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/slick/slick-theme.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/slick/slick.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/slick/slick.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/slick/slick.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/slick/slick.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick-1.8.1/slick/slick.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/slick.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/.sass-cache/a5a13fbae20ae168994ec002767d347fa56479ba/main.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/.sass-cache/bf7f96e62b66340f62007fda7792f1ff2c9c2d67/1_header.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/.sass-cache/bf7f96e62b66340f62007fda7792f1ff2c9c2d67/2_ability.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/.sass-cache/bf7f96e62b66340f62007fda7792f1ff2c9c2d67/3_about_us.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/.sass-cache/bf7f96e62b66340f62007fda7792f1ff2c9c2d67/4_our_works.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/.sass-cache/bf7f96e62b66340f62007fda7792f1ff2c9c2d67/5_footer.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/main.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/main.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/sass_modules/_part_10_js_range.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/sass_modules/_part_12_js_cart.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/sass_modules/_part_13_js_page_information.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/sass_modules/_part_1_header_nav.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/sass_modules/_part_2_header.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/sass_modules/_part_3_main_content.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/sass_modules/_part_4_posts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/sass_modules/_part_5_slider.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/sass_modules/_part_6_footer.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/sass_modules/_part_7_425px.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/sass_modules/_part_9_login.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/card.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/card.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/partials/footer.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/footer.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/partials/header.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/header.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/partials/navbar.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/navbar.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/product.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/product.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/products.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/products.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,8 +239,13 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/server" />
       <recent name="$PROJECT_DIR$/views" />
       <recent name="$PROJECT_DIR$/public/css" />
     </key>
@@ -80,7 +259,7 @@
       <option name="presentableId" value="Default" />
       <updated>1607451734316</updated>
       <workItem from="1607451735940" duration="14536000" />
-      <workItem from="1607518792878" duration="77805000" />
+      <workItem from="1607518792878" duration="106457000" />
     </task>
     <servers />
   </component>

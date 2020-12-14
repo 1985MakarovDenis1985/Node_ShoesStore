@@ -19,7 +19,7 @@ router.get('/all', async (req, res) => {
 router.get('/:id', async (req, res) => {
     const product = await Product.getById(req.params.id)
     res.render('product', {
-        layout: 'empty',
+        // layout: 'empty',
         title: `Prod: ${product.title}`,
         product
     })

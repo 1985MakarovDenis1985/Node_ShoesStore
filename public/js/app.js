@@ -29,12 +29,19 @@ function countPercent(price, newPrice) {
 }
 
 function createCard(product) {
-    let shoeBox = createNewElement("div", "box_shoe", null, null, null);
+    let shoeBox = createNewElement("div", "box_shoes", null, null, null);
     shoeBox.style.backgroundImage = "url(css/images/" + product.imgUrl + ")";
     let coast = createNewElement("p", "main_coast_shoe", "$" + product.price, null);
-    let boxSale = createNewElement("div", "boxSale", countPercent(product.priceDown, product.price), null);
 
-    let coastDown = createNewElement("p", "down_coast_shoe", product.priceDown, null);
+    let boxSale = createNewElement("div", "boxSale", "-"+countPercent(product.priceDown, product.price)+"%", null);
+    let coastDown = createNewElement("p", "down_coast_shoe", "$"+product.priceDown, null);
+
+    if (!product.priceDown){
+        boxSale.style.display = "none"
+        coastDown.style.display = "none"
+    }
+
+
 
     let sex = createNewElement("p", "sex_box_shoe", product.sex, null);
     let title = createNewElement("h5", "name_box_shoe", product.title);
@@ -69,9 +76,9 @@ function createCard(product) {
     let showItem = createNewElement("a", "show_more", "show more", [{
         "name": "data-id",
         "value": product.id
-    },{
+    }, {
         "name": "href",
-        "value": '/products/'+product.id
+        "value": '/products/' + product.id
     }], null)
 
     let shoeBoxFull = appChild(shoeBox, [coast, coastDown, sex, title, boxSale, showItem])
@@ -113,15 +120,14 @@ function renderPag(products) {
 
 async function getProducts(sex) {
     current = 0
-   const prod = await fetch(`/products/all`)
-       .then(data => data.json())
+    const prod = await fetch(`/products/all`)
+        .then(data => data.json())
         .then((data) => {
-            if (sex){
+            if (sex) {
                 const a = data.filter(el => el.sex === sex)
                 render(a)
                 renderPag(a)
-            }
-            else {
+            } else {
                 render(data)
                 renderPag(data)
             }
@@ -132,24 +138,59 @@ async function getProducts(sex) {
 
 // setTimeout(() => {
 
-    const btn = document.getElementById("range_content_box")
-    if (btn) {
-        getProducts()
+const btn = document.getElementById("range_content_box")
+if (btn) {
+    getProducts()
     //
-        document.getElementById('getAll').addEventListener('click', () => {
-            getProducts()
-        })
-        document.getElementById('getMen').addEventListener('click', () => {
-            getProducts('man')
-        })
-        document.getElementById('getWomen').addEventListener('click', () => {
-            getProducts('woman')
-        })
-        document.getElementById('getChildren').addEventListener('click', () => {
-            getProducts('children')
-        })
-    }
+    document.getElementById('getAll').addEventListener('click', () => {
+        getProducts()
+    })
+    document.getElementById('getMen').addEventListener('click', () => {
+        getProducts('man')
+    })
+    document.getElementById('getWomen').addEventListener('click', () => {
+        getProducts('woman')
+    })
+    document.getElementById('getChildren').addEventListener('click', () => {
+        getProducts('children')
+    })
+}
 // }, 500)
+
+const $card = document.querySelector('#card')
+if ($card) {
+    $card.addEventListener('click', event => {
+        if (event.target.classList.contains('btn-remove')) {
+            const id = event.target.dataset.id
+
+            fetch('/card/remove/' + id, {
+                method: 'delete',
+            }).then((res) => res.json())
+                .then(card => {
+                    window.location.href = "/card"
+                    console.log(card)
+                    // if (card.products.length) {
+                    //     const html = card.products.map(el => {
+                    //         return `
+                    //              <tr>
+                    //                 <td>${el.title}</td>
+                    //                 <td>${el.count}</td>
+                    //                 <td>
+                    //                     <button class="btn btn-small js-remove" data-id="${el.id}">Remove course</button>
+                    //                 </td>
+                    //              </tr>
+                    //         `
+                    //     }).join('')
+                    //     $card.querySelector('block-products_item').innerHTML = html
+                    //     // $card.querySelector('.price').textContent = toCurrency(card.price)
+                    // }else{
+                    //     $card.innerHTML = "Card is empty"
+                    // }
+                })
+            console.log(id)
+        }
+    })
+}
 
 
 

@@ -4,9 +4,6 @@
   "description": "redevelop sneakers store with node",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development",
-    "build": "webpack --mode production",
-    "test": "jest",
     "start": "nodemon index.js"
   },
   "browserslist": [

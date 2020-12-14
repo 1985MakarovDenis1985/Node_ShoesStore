@@ -1,1 +1,56 @@
-<h1>Card</h1>
+<div class="card-box" id="card">
+<!--    <div class="over_slider_text over_slider_text_login">-->
+<!--        <p class="over_slider_text_word">Y</p>-->
+<!--        <p class="over_slider_text_word">O</p>-->
+<!--        <p class="over_slider_text_word">U</p>-->
+<!--        <p class="over_slider_text_word">R</p>-->
+<!--        <p class="over_slider_text_word"></p>-->
+<!--        <p class="over_slider_text_word" style="margin-left: 10px">O</p>-->
+<!--        <p class="over_slider_text_word" style="margin-left: 0px">R</p>-->
+<!--        <p class="over_slider_text_word">D</p>-->
+<!--        <p class="over_slider_text_word">E</p>-->
+<!--        <p class="over_slider_text_word">R</p>-->
+<!--        <p class="over_slider_text_word">S</p>-->
+
+<!--    </div>-->
+<!--    <div class="over_slider_text_shadow">-->
+<!--        <p class=" over_slider_text_word_shadow">Y</p>-->
+<!--        <p class=" over_slider_text_word_shadow">O</p>-->
+<!--        <p class=" over_slider_text_word_shadow">U</p>-->
+<!--        <p class=" over_slider_text_word_shadow">R</p>-->
+<!--        <p class=" over_slider_text_word_shadow"></p>-->
+<!--        <p class=" over_slider_text_word_shadow" style="margin-left: 10px">O</p>-->
+<!--        <p class=" over_slider_text_word_shadow" style="margin-left: 0px;">R</p>-->
+<!--        <p class=" over_slider_text_word_shadow">D</p>-->
+<!--        <p class=" over_slider_text_word_shadow">E</p>-->
+<!--        <p class=" over_slider_text_word_shadow">R</p>-->
+<!--        <p class=" over_slider_text_word_shadow">S</p>-->
+<!--    </div>-->
+
+    {{#if products.length}}
+
+        {{#each products}}
+            <div class="block-products_item">
+<!--                <div style="background-image: url('/css/images/{{imgUrl}}')" class="products_item-img"></div>-->
+                <div class="products_item-title">{{title}}</div>
+                <div class="products_item-price">{{price}}</div>
+                <div class="products_item-size">{{size}}</div>
+                <div class="products_item-count">{{count}}</div>
+
+                <div class="btn-remove_block">
+                    <button class="btn btn-small btn-remove" data-id="{{id}}">Remove course</button>
+                </div>
+            </div>
+        {{/each}}
+        <div class="buy_overall">
+            <p class="overall-price"><strong>Overall: <span class="price">${{price}}</span></strong></p>
+            <button class="btn_overall-price" id="btn_overall-price">BUY</button>
+        </div>
+
+    {{else}}
+        <p>Card is empty</p>
+    {{/if}}
+</div>
+
+
+

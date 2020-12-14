@@ -27,26 +27,26 @@
             {{#if products.length}}
                 <div class="range_content_box" id="range_content_box">
 
-                    {{#each products}}
-                        <div class="box_shoe" style="background-image: url('css/images/{{imgUrl}}')">
-                            <p class="main_coast_shoe">${{price}}</p>
-                            {{#if priceDown}}
-                                <p class="down_coast_shoe">${{priceDown}}</p>
-                            {{/if}}
-                            <p class="sex_box_shoe">{{sex}}</p>
-                            <h5 class="name_box_shoe">{{title}}</h5>
-                            {{#if boxSale}}
-                                <div class="boxSale">{{boxSale}}%</div>
-                            {{/if}}
-                            <div class="show_more">
-                                <a href="/products/{{id}}" style="color: white">Open the course</a>
-                                <!--                                <form action="/card/add" method="POST">-->
-                                <!--                                    <input type="hidden"  name="id" value="{{id}}" >-->
-                                <!--                                    <button type="submit" class="btn btn-primary">Byu</button>-->
-                                <!--                                </form>-->
-                            </div>
-                        </div>
-                    {{/each}}
+<!--                    {{#each products}}-->
+<!--                        <div class="box_shoe" style="background-image: url('css/images/{{imgUrl}}')">-->
+<!--                            <p class="main_coast_shoe">${{price}}</p>-->
+<!--                            {{#if priceDown}}-->
+<!--                                <p class="down_coast_shoe">${{priceDown}}</p>-->
+<!--                            {{/if}}-->
+<!--                            <p class="sex_box_shoe">{{sex}}</p>-->
+<!--                            <h5 class="name_box_shoe">{{title}}</h5>-->
+<!--                            {{#if boxSale}}-->
+<!--                                <div class="boxSale">{{boxSale}}%</div>-->
+<!--                            {{/if}}-->
+<!--                            <div class="show_more">-->
+<!--                                <a href="/products/{{id}}" style="color: white">Open the course</a>-->
+<!--                                &lt;!&ndash;                                <form action="/card/add" method="POST">&ndash;&gt;-->
+<!--                                &lt;!&ndash;                                    <input type="hidden"  name="id" value="{{id}}" >&ndash;&gt;-->
+<!--                                &lt;!&ndash;                                    <button type="submit" class="btn btn-primary">Byu</button>&ndash;&gt;-->
+<!--                                &lt;!&ndash;                                </form>&ndash;&gt;-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    {{/each}}-->
 
                 </div>
                 <div class="pag_box" id="pag_box"></div>
@@ -60,3 +60,4 @@
 
     </div>
 </div>
+

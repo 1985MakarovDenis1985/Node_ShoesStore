@@ -1,8 +1,8 @@
 @font-face {
     font-family: myriadpro-regular;
     src: url(../fonts/MyriadPro/myriadpro-regular.ttf);
-    src: url(../fonts/MyriadPro/myriadpro-regular.eot);
-    src: url(../fonts/MyriadPro/myriadpro-regular.woff);
+    src: url(../fonts/MyriadPro/MyriadPro-Regular.eot);
+    src: url(../fonts/MyriadPro/MyriadPro-Regular.woff);
     font-weight: 400;
     font-style: normal
 }
@@ -2256,12 +2256,12 @@ label {
     flex-wrap: wrap
 }
 
-.range_content_box, .range_content_box .box_shoe {
+.range_content_box, .range_content_box .box_shoes {
     -webkit-box-sizing: border-box;
     box-sizing: border-box
 }
 
-.range_content_box .box_shoe {
+.range_content_box .box_shoes {
     width: 25%;
     height: 40%;
     border: 1px solid grey;
@@ -2282,13 +2282,13 @@ label {
     box-shadow: -1px 0 #a8a8a8, -1px 1px #7f7f7f, -2px 1px #a7a7a7, -2px 2px #7e7e7e, -3px 2px #a6a6a6, -3px 3px #7d7d7d, -4px 3px #a5a5a5, -4px 4px #7c7c7c, -5px 4px #a4a4a4, -5px 5px #7b7b7b, -6px 5px #a3a3a3, -6px 6px #7a7a7a, -7px 6px #a2a2a2, -7px 7px #797979, -8px 7px #a1a1a1, -8px 8px #787878
 }
 
-.range_content_box .box_shoe:hover {
+.range_content_box .box_shoes:hover {
     margin-top: 0 !important;
     -webkit-box-shadow: -1px 0 #3d1f13, -1px 1px #542c1c, -2px 1px #3c1e12, -2px 2px #532b1b, -3px 2px #3b1d11, -3px 3px #522a1a, -4px 3px #3a1c10, -4px 4px #512919, -5px 4px #391b0f, -5px 5px #502818, -6px 5px #381a0e, -6px 6px #4f2717, -7px 6px #37190d, -7px 7px #4e2616, -8px 7px #36180c, -8px 8px #4d2515, -9px 8px #35170b, -9px 9px #4c2414, -10px 9px #34160a, -10px 10px #4b2313, -11px 10px #331509, -11px 11px #4a2212, -12px 11px #321408, -12px 12px #492111, -13px 12px #311307, -13px 13px #482010, -14px 13px #301206, -14px 14px #471f0f, -15px 14px #2f1105, -15px 15px #461e0e;
     box-shadow: -1px 0 #3d1f13, -1px 1px #542c1c, -2px 1px #3c1e12, -2px 2px #532b1b, -3px 2px #3b1d11, -3px 3px #522a1a, -4px 3px #3a1c10, -4px 4px #512919, -5px 4px #391b0f, -5px 5px #502818, -6px 5px #381a0e, -6px 6px #4f2717, -7px 6px #37190d, -7px 7px #4e2616, -8px 7px #36180c, -8px 8px #4d2515, -9px 8px #35170b, -9px 9px #4c2414, -10px 9px #34160a, -10px 10px #4b2313, -11px 10px #331509, -11px 11px #4a2212, -12px 11px #321408, -12px 12px #492111, -13px 12px #311307, -13px 13px #482010, -14px 13px #301206, -14px 14px #471f0f, -15px 14px #2f1105, -15px 15px #461e0e
 }
 
-.range_content_box .box_shoe .name_box_shoe, .range_content_box .box_shoe .sex_box_shoe {
+.range_content_box .box_shoes .name_box_shoe, .range_content_box .box_shoes .sex_box_shoe {
     font-family: TruenoBd;
     font-size: 15px;
     text-transform: uppercase;
@@ -2297,26 +2297,26 @@ label {
     color: grey
 }
 
-.range_content_box .box_shoe .name_box_shoe {
+.range_content_box .box_shoes .name_box_shoe {
     bottom: 10%;
     text-transform: none;
     font-family: TruenoLt;
     font-size: 16px
 }
 
-.range_content_box .box_shoe .main_coast_shoe {
+.range_content_box .box_shoes .main_coast_shoe {
     font-size: 23px;
     color: #ff7270
 }
 
-.range_content_box .box_shoe .down_coast_shoe {
+.range_content_box .box_shoes .down_coast_shoe {
     color: grey;
     font-size: 18px;
     margin-top: 5px;
     text-decoration: line-through
 }
 
-.range_content_box .box_shoe .boxSale {
+.range_content_box .box_shoes .boxSale {
     width: 25%;
     height: 30px;
     float: right;
@@ -2329,7 +2329,7 @@ label {
     background: #ff7270
 }
 
-.range_content_box .box_shoe .show_more {
+.range_content_box .box_shoes .show_more {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 2px;
@@ -2349,7 +2349,7 @@ label {
     opacity: 0
 }
 
-.box_shoe:hover > .show_more {
+.box_shoes:hover > .show_more {
     right: -8px;
     opacity: 1
 }
@@ -4863,7 +4863,7 @@ i:hover {
         font-size: 15px
     }
 
-    .range_content_box .box_shoe .show_more {
+    .range_content_box .box_shoes .show_more {
         bottom: 20px
     }
 
@@ -5456,11 +5456,11 @@ i:hover {
         height: 750px
     }
 
-    .range_content_box .box_shoe .name_box_shoe {
+    .range_content_box .box_shoes .name_box_shoe {
         font-size: 11px
     }
 
-    .range_content_box .box_shoe .boxSale {
+    .range_content_box .box_shoes .boxSale {
         font-size: 12px !important;
         height: 25px;
         line-height: 25px
@@ -5771,7 +5771,7 @@ i:hover {
         justify-content: normal
     }
 
-    .range_content_box .box_shoe {
+    .range_content_box .box_shoes {
         width: 230px;
         height: 120px
     }
@@ -6137,7 +6137,7 @@ i:hover {
         display: none
     }
 
-    .range_content_box .box_shoe {
+    .range_content_box .box_shoes {
         width: 210px
     }
 
@@ -6252,7 +6252,7 @@ i:hover {
         font-size: 15px
     }
 
-    .range_content_box .box_shoe {
+    .range_content_box .box_shoes {
         width: 160px
     }
 
