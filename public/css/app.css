@@ -311,7 +311,7 @@
 
 .logo_left_word {
     float: left;
-    background-image: url(images/line_logo.png);
+    background-image: url(/img/line_logo.png);
     -webkit-background-clip: text;
     background-position: -400px -30px;
     color: rgba(0, 0, 0, 0);
@@ -723,7 +723,7 @@
     overflow: hidden;
     width: 540px;
     height: 585px;
-    background-image: url(images/2_shoe_third_2.jpg);
+    background-image: url(../img/2_shoe_third_2.jpg);
     background-repeat: no-repeat;
     margin-top: 70px;
     position: relative;
@@ -859,7 +859,7 @@
 .main_discription_top_left_shoes_add {
     width: 25px;
     height: 95px;
-    background-image: url(images/3_shoe_third_add.png);
+    background-image: url(../img/3_shoe_third_add.png);
     background-position: 10px 0;
     background-size: cover;
     position: absolute;
@@ -933,7 +933,7 @@
 .main_discription_top_right_shoes {
     width: 640px;
     height: 255px;
-    background-image: url(images/4_shoe_second.png);
+    background-image: url(../img/4_shoe_second.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
@@ -1130,7 +1130,7 @@
     float: right;
     margin-top: 43px;
     margin-left: 20px;
-    background-image: url(images/5_shoe_fourth.jpg);
+    background-image: url(../img/5_shoe_fourth.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
@@ -1328,7 +1328,7 @@
 
 .main_description_bottom_right_shoes {
     margin-left: 0;
-    background-image: url(images/6_shoe_fift.jpg);
+    background-image: url(../img/6_shoe_fift.jpg);
     background-repeat: no-repeat;
     background-size: contain
 }
@@ -1578,35 +1578,35 @@ label {
 }
 
 .box_shoes_1 {
-    background-image: url(images/7_shoe_item_1.png)
+    background-image: url(../img/7_shoe_item_1.png)
 }
 
 .box_shoes_2 {
-    background-image: url(images/8_shoe_item_2.png)
+    background-image: url(../img/8_shoe_item_2.png)
 }
 
 .box_shoes_3 {
-    background-image: url(images/9_shoe_item_3.png)
+    background-image: url(../img/9_shoe_item_3.png)
 }
 
 .box_shoes_4 {
-    background-image: url(images/10_shoe_item_4.png)
+    background-image: url(../img/10_shoe_item_4.png)
 }
 
 .box_shoes_5 {
-    background-image: url(images/11_shoe_item_5.png)
+    background-image: url(../img/11_shoe_item_5.png)
 }
 
 .box_shoes_6 {
-    background-image: url(images/12_shoe_item_6.png)
+    background-image: url(../img/12_shoe_item_6.png)
 }
 
 .box_shoes_7 {
-    background-image: url(images/13_shoe_item_7.png)
+    background-image: url(../img/13_shoe_item_7.png)
 }
 
 .box_shoes_8 {
-    background-image: url(images/14_shoe_item_8.png)
+    background-image: url(../img/14_shoe_item_8.png)
 }
 
 .box_shoes_first_price {
@@ -1675,7 +1675,7 @@ label {
     width: 170px;
     height: 170px;
     margin-top: 10px;
-    background-image: url(images/15_sprite_brands.png);
+    background-image: url(../img/15_sprite_brands.png);
     background-repeat: no-repeat
 }
 
@@ -2419,7 +2419,7 @@ label {
 .comments_box {
     width: 100%;
     height: 600px;
-    background-image: url(images/16_bg_posts.jpg);
+    background-image: url(../img/16_bg_posts.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -2471,7 +2471,7 @@ label {
     -o-transition: .5s;
     transition: .5s;
     margin: auto;
-    background-image: url(images/18_post_1.png);
+    background-image: url(../img/18_post_1.png);
     background-size: cover
 }
 
@@ -2497,7 +2497,7 @@ label {
 .comments_box_post .comments_box_post_face .comments_box_post_face_text {
     width: 1100px;
     height: 0;
-    background-image: url(images/17_bg_posts_comment.png);
+    background-image: url(../img/17_bg_posts_comment.png);
     background-repeat: repeat-x;
     background-position: 150px 20px;
     position: absolute;
@@ -2546,7 +2546,7 @@ label {
 .corner .corner_box {
     width: 30px;
     height: 30px;
-    background-image: url(images/17_bg_posts_comment.png);
+    background-image: url(../img/17_bg_posts_comment.png);
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -2569,11 +2569,11 @@ label {
 }
 
 .comments_box_post_face_second {
-    background-image: url(images/19_man.png) !important
+    background-image: url(../img/19_man.png) !important
 }
 
 .comments_box_post_face_third {
-    background-image: url(images/20_woman.png) !important
+    background-image: url(../img/20_woman.png) !important
 }
 
 .comments_box_post_face_text_second {
@@ -2635,7 +2635,7 @@ label {
     color: rgba(0, 0, 0, 0) !important;
     -webkit-transform: rotateX(-60deg);
     transform: rotateX(-60deg);
-    background-image: url(images/28_news.png);
+    background-image: url(../img/28_news.png);
     background-position: 0 55px
 }
 
@@ -2820,23 +2820,23 @@ label {
 }
 
 .slick_first {
-    background-image: url(images/slider_1_sneakers_1.jpg)
+    background-image: url(../img/slider_1_sneakers_1.jpg)
 }
 
 .slick_second {
-    background-image: url(images/slider_2_sneakers_2.jpg)
+    background-image: url(../img/slider_2_sneakers_2.jpg)
 }
 
 .slick_three {
-    background-image: url(images/slider_3_sneakers_3.jpg)
+    background-image: url(../img/slider_3_sneakers_3.jpg)
 }
 
 .slick_fourt {
-    background-image: url(images/slider_4_sneakers_4.jpg)
+    background-image: url(../img/slider_4_sneakers_4.jpg)
 }
 
 .slick_fift {
-    background-image: url(images/slider_5_sneakers_5.jpg)
+    background-image: url(../img/slider_5_sneakers_5.jpg)
 }
 
 .slider_comments_box {
@@ -3010,7 +3010,7 @@ ul > li.slick-active:before {
     border: 2px solid #48301c;
     background: #48301c;
     content: "";
-    background-image: url(images/footer.png);
+    background-image: url(../img/footer.png);
     position: absolute;
     z-index: 1000000;
     -webkit-transition: .5s;
@@ -3541,7 +3541,7 @@ ul > li.slick-active:before {
     width: 130px;
     height: 150px;
     margin-top: 50px;
-    background-image: url(images/26_footer_sprite.png);
+    background-image: url(../img/26_footer_sprite.png);
     background-repeat: no-repeat;
     background-position: 40px 0;
     font-family: TruenoLt;
@@ -3748,7 +3748,7 @@ ul > li.slick-active:before {
 }
 
 .icons > li i {
-    background-image: url(images/icon_bg.png);
+    background-image: url(../img/icon_bg.png);
     -webkit-background-clip: text;
     background-position: 0 -25px;
     color: rgba(0, 0, 0, 0);
@@ -4207,7 +4207,7 @@ i:hover {
     width: 100%;
     height: inherit;
     position: absolute;
-    background-image: url(images/29_jog.jpg);
+    background-image: url(../img/29_jog.jpg);
     -webkit-filter: grayscale(100%) sepia(100%);
     filter: grayscale(100%) sepia(100%);
     z-index: -1;
@@ -4369,7 +4369,7 @@ i:hover {
     height: 100%;
     width: 70%;
     padding: 10px;
-    background-image: url(images/7_shoe_item_1.png);
+    background-image: url(../img/7_shoe_item_1.png);
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: 50%;
@@ -4657,7 +4657,7 @@ i:hover {
 .cart_list .box_of_cart .item_block_top .item_of_card .item_of_card_block_centre {
     width: 45%;
     height: 100%;
-    background-image: url(images/12_shoe_item_6.png);
+    background-image: url(../img/12_shoe_item_6.png);
     background-repeat: no-repeat;
     background-position: center 0;
     background-size: contain

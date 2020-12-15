@@ -30,7 +30,7 @@ function countPercent(price, newPrice) {
 
 function createCard(product) {
     let shoeBox = createNewElement("div", "box_shoes", null, null, null);
-    shoeBox.style.backgroundImage = "url(css/images/" + product.imgUrl + ")";
+    shoeBox.style.backgroundImage = "url(/img/" + product.imgUrl + ")";
     let coast = createNewElement("p", "main_coast_shoe", "$" + product.price, null);
 
     let boxSale = createNewElement("div", "boxSale", "-"+countPercent(product.priceDown, product.price)+"%", null);

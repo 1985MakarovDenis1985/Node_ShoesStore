@@ -1,6 +1,9 @@
 const express = require('express')
 const path = require('path')
 const exphbs = require('express-handlebars')
+const Handlebars = require('handlebars')
+const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
+const mongoose = require('mongoose')
 
 const homeRoutes = require('./routes/home')
 const loginRouter = require('./routes/loginPage')
@@ -17,6 +20,7 @@ const app = express()
 const hbs = exphbs.create({
     defaultLayout: 'main',
     extname: 'hbs',
+    handlebars: allowInsecurePrototypeAccess(Handlebars) // решает проблемы с доступом
 })
 
 
@@ -38,9 +42,19 @@ app.use('/test' ,testRouter)
 
 
 
-
 const PORT = process.env.PORT || 3000
-app.listen(PORT, () => {
-    console.log(`server on port:${3000} has been started...`)
-})
+
+async function start (){
+    try {
+        const url = "mongodb+srv://admin:admin@cluster0.wn2yx.mongodb.net/shop"
+        await mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true}) // without warnings
+        app.listen(PORT, () => {
+            console.log(`server on port:${3000} has been started...`)
+        })
+    }catch (err){
+        console.log(err)
+    }
+}
+start()
+
 
