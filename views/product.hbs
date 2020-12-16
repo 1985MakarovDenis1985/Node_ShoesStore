@@ -17,14 +17,22 @@
             </p>
         </h1>
         <div class="new_price" id="new_price">${{product.price}}</div>
-        <div class="price_before" id="price_before">${{product.priceDown}}</div>
-        <div class="boxSale" id="product_percent">{{product.boxSale}}</div>
+        {{#if product.startPrice}}
+            <div class="price_before" id="price_before">${{product.startPrice}}</div>
+            <div class="boxSale" id="product_percent">{{product.boxSale}}</div>
+        {{/if}}
 
 
         <form action="/card/add" method="post">
-            <input type="hidden" name="id" value="{{product.id}}">
+            <input type="hidden" name="id" value="{{product._id}}">
             <button type="submit" class="btn-buy btn btn-primary">Byu</button>
         </form>
+        <div class="clearfix"></div>
+
+        <div class="btn-buy btn_edit" id="btn_edit">
+            <div class="link_cover" id="link_cover"></div>
+            <a class="link_edit " href="/products/{{product._id}}/edit?allow=true">Edit</a>
+        </div>
     </div>
 </div>
 
@@ -201,18 +209,18 @@
 </footer>
 
 <script>
+
     const percentBox = document.getElementById("product_percent")
     const priceBefore =  document.getElementById("price_before")
-    const percentSale = countPercent({{product.priceDown}}, {{product.price}})
+    const percentSale = countPercent({{product.startPrice}}, {{product.price}})
 
-    if (percentSale === Infinity) {
-        percentBox.style.display = "none"
-        priceBefore.style.display = "none"
-    } else {
+    if (percentSale !== Infinity) {
         percentBox.innerText = `- ${percentSale}%`
     }
     function countPercent(priceBefore, newPrice) {
         let count = Math.ceil(newPrice * 100 / priceBefore);
         return +count
     }
+
+    const btnEdit = document.getElementById("link_cover").style.display = "none"
 </script>

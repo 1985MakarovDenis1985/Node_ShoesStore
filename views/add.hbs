@@ -1,67 +1,64 @@
 <div class="login_box" id="">
 
-<!--        <div class="js_content_title js_login_title" id="js_login_title" style="position: relative">-->
-<!--            <div class="over_slider_text over_slider_text_login">-->
-<!--                <p class="over_slider_text_word">A</p>-->
-<!--                <p class="over_slider_text_word">D</p>-->
-<!--                <p class="over_slider_text_word">D</p>-->
-<!--                <p class="over_slider_text_word"></p>-->
-<!--                <p class="over_slider_text_word" style="margin-left: 10px">P</p>-->
-<!--                <p class="over_slider_text_word">R</p>-->
-<!--                <p class="over_slider_text_word" style="margin-left: 0px">O</p>-->
-<!--                <p class="over_slider_text_word">D</p>-->
-<!--                <p class="over_slider_text_word">U</p>-->
-<!--                <p class="over_slider_text_word">C</p>-->
-<!--                <p class="over_slider_text_word">T</p>-->
-<!--            </div>-->
-<!--            <div class="over_slider_text_shadow">-->
-<!--                <p class=" over_slider_text_word_shadow">A</p>-->
-<!--                <p class=" over_slider_text_word_shadow">D</p>-->
-<!--                <p class=" over_slider_text_word_shadow">D</p>-->
-<!--                <p class=" over_slider_text_word_shadow"></p>-->
-<!--                <p class=" over_slider_text_word_shadow" style="margin-left: 10px">P</p>-->
-<!--                <p class=" over_slider_text_word_shadow">R</p>-->
-<!--                <p class=" over_slider_text_word_shadow" style="margin-left: 0px">O</p>-->
-<!--                <p class=" over_slider_text_word_shadow">D</p>-->
-<!--                <p class=" over_slider_text_word_shadow">U</p>-->
-<!--                <p class=" over_slider_text_word_shadow">C</p>-->
-<!--                <p class=" over_slider_text_word_shadow">T</p>-->
-<!--            </div>-->
-<!--        </div>-->
+    <!--        <div class="js_content_title js_login_title" id="js_login_title" style="position: relative">-->
+    <!--            <div class="over_slider_text over_slider_text_login">-->
+    <!--                <p class="over_slider_text_word">A</p>-->
+    <!--                <p class="over_slider_text_word">D</p>-->
+    <!--                <p class="over_slider_text_word">D</p>-->
+    <!--                <p class="over_slider_text_word"></p>-->
+    <!--                <p class="over_slider_text_word" style="margin-left: 10px">P</p>-->
+    <!--                <p class="over_slider_text_word">R</p>-->
+    <!--                <p class="over_slider_text_word" style="margin-left: 0px">O</p>-->
+    <!--                <p class="over_slider_text_word">D</p>-->
+    <!--                <p class="over_slider_text_word">U</p>-->
+    <!--                <p class="over_slider_text_word">C</p>-->
+    <!--                <p class="over_slider_text_word">T</p>-->
+    <!--            </div>-->
+    <!--            <div class="over_slider_text_shadow">-->
+    <!--                <p class=" over_slider_text_word_shadow">A</p>-->
+    <!--                <p class=" over_slider_text_word_shadow">D</p>-->
+    <!--                <p class=" over_slider_text_word_shadow">D</p>-->
+    <!--                <p class=" over_slider_text_word_shadow"></p>-->
+    <!--                <p class=" over_slider_text_word_shadow" style="margin-left: 10px">P</p>-->
+    <!--                <p class=" over_slider_text_word_shadow">R</p>-->
+    <!--                <p class=" over_slider_text_word_shadow" style="margin-left: 0px">O</p>-->
+    <!--                <p class=" over_slider_text_word_shadow">D</p>-->
+    <!--                <p class=" over_slider_text_word_shadow">U</p>-->
+    <!--                <p class=" over_slider_text_word_shadow">C</p>-->
+    <!--                <p class=" over_slider_text_word_shadow">T</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
 
-<div class="add_container">
-    <div class="add_form_container" id="">
-        <form method="post" action="/add" class="form_block">
-            <div class="left_add_block">
-                <img class="temp_img" src="/img/9_shoe_item_3.png" alt=""/>
-                <input type="file" placeholder="imgUrl" name="imgUrl" />
-<!--                <input type="text" placeholder="title" name="title" />-->
-<!--                <input type="text" placeholder="price" name="price"/>-->
-<!--                <input type="text" placeholder="boxSale" name="boxSale"/>-->
-<!--                <div class="temp_btn_block">-->
-<!--                    <button id="temp_btn_remove">REMOVE</button>-->
-<!--                    <button id="temp_btn_change">CHANGE</button>-->
-<!--                </div>-->
-            </div>
+    <div class="add_container">
+        <div class="add_form_container" id="">
+            <form method="post" action="/add" class="form_block">
+                <div class="left_add_block">
+                    <img class="temp_img" id="temp_img" src="/img/9_shoe_item_3.png" alt=""/>
+                    <input type="file" id="imgUrl" placeholder="imgUrl" name="imgUrl"/>
+                </div>
 
-            <div class="right_add_block">
-                <input type="text" placeholder="title" name="title" />
-                <input type="text" placeholder="price" name="price"/>
-                <input type="text" placeholder="boxSale" name="boxSale"/>
-                <input type="text" placeholder="sex" name="sex"/>
-                <input type="number" placeholder="size" name="size"/>
-                <textarea class="desc" id="" cols="30" rows="10" placeholder="desc" name="desc"></textarea>
-                <button id="temp_btn_add">ADD</button>
-
-            </div>
-        </form>
+                <div class="right_add_block">
+                    <input type="text" placeholder="title" name="title"/>
+                    <input type="text" placeholder="price" name="price"/>
+                    <input type="text" placeholder="first price" name="startPrice"/>
+                    <input type="text" placeholder="sex" name="sex"/>
+                    <input type="string" placeholder="size" name="size"/>
+                    <textarea class="desc" id="" cols="30" rows="10" placeholder="desc" name="desc"></textarea>
+                    <button type="submit" id="temp_btn_add">ADD</button>
+                </div>
+            </form>
+        </div>
     </div>
-
-<!--    <div class="add_users_container">-->
-
-<!--    </div>-->
 </div>
 
+<!--изменить-->
+<script>
+    const inpImg = document.getElementById('imgUrl')
+    const tempImg = document.getElementById('temp_img')
 
-</div>
+    inpImg.addEventListener('change', (e)=>{
+        let filename = e.target.value.replace(/.*\\/, "")
+        tempImg.src = '/img/'+filename
+    })
+</script>
 

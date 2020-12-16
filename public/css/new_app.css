@@ -198,7 +198,37 @@ input[type=file]{
     transition: .5s;
     font-size: 25px;
     float: right;
+    cursor: pointer;
 }
+
+.clearfix{
+    float: none;
+}
+.btn_edit{
+    margin-top: 1%;
+    position: relative;
+    padding: 0;
+}
+.btn_edit > .link_edit{
+    text-decoration: none;
+    color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    font-family: TruenoLt;
+    text-align: center;
+    line-height: 45px;
+}
+
+.btn_edit > .link_cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    /*margin: -2px;*/
+}
+
+
+
 
 /*card*/
 

@@ -33,55 +33,26 @@ function createCard(product) {
     shoeBox.style.backgroundImage = "url(/img/" + product.imgUrl + ")";
     let coast = createNewElement("p", "main_coast_shoe", "$" + product.price, null);
 
-    let boxSale = createNewElement("div", "boxSale", "-"+countPercent(product.priceDown, product.price)+"%", null);
-    let coastDown = createNewElement("p", "down_coast_shoe", "$"+product.priceDown, null);
-
-    if (!product.priceDown){
-        boxSale.style.display = "none"
-        coastDown.style.display = "none"
-    }
-
-
+    let boxSale = createNewElement("div", "boxSale", "-"+countPercent(product.startPrice, product.price)+"%", null);
+    let coastDown = createNewElement("p", "down_coast_shoe", "$"+product.startPrice, null);
 
     let sex = createNewElement("p", "sex_box_shoe", product.sex, null);
     let title = createNewElement("h5", "name_box_shoe", product.title);
 
-    // let inputAdd = createNewElement('input', null, null, [
-    //     {
-    //         "name": "type",
-    //         "value": 'hidden'
-    //     }, {
-    //         "name": "value",
-    //         "value": product.id
-    //     }, {
-    //         "name": "name",
-    //         "value": "id"
-    //     }
-    // ])
-    // let btnAddToCard = createNewElement('button', "show_more_btn", "show more", [
-    //     {
-    //         "name": "type",
-    //         "value": 'submit'
-    //     }
-    // ])
-    // let showItem = appChild(createNewElement('form', "show_more", null, [{
-    //     "name": "action",
-    //     "value": '/card/add'
-    // }, {
-    //     "name": "method",
-    //     "value": "POST"
-    // }], null), [inputAdd, btnAddToCard])
-
 
     let showItem = createNewElement("a", "show_more", "show more", [{
         "name": "data-id",
-        "value": product.id
+        "value": product._id
     }, {
         "name": "href",
-        "value": '/products/' + product.id
+        "value": '/products/' + product._id
     }], null)
-
-    let shoeBoxFull = appChild(shoeBox, [coast, coastDown, sex, title, boxSale, showItem])
+    let shoeBoxFull
+    if (!product.startPrice){
+        shoeBoxFull = appChild(shoeBox, [coast, sex, title, showItem])
+    } else {
+         shoeBoxFull = appChild(shoeBox, [coast, coastDown, sex, title, boxSale, showItem])
+    }
     return shoeBoxFull
 }
 
@@ -169,23 +140,6 @@ if ($card) {
                 .then(card => {
                     window.location.href = "/card"
                     console.log(card)
-                    // if (card.products.length) {
-                    //     const html = card.products.map(el => {
-                    //         return `
-                    //              <tr>
-                    //                 <td>${el.title}</td>
-                    //                 <td>${el.count}</td>
-                    //                 <td>
-                    //                     <button class="btn btn-small js-remove" data-id="${el.id}">Remove course</button>
-                    //                 </td>
-                    //              </tr>
-                    //         `
-                    //     }).join('')
-                    //     $card.querySelector('block-products_item').innerHTML = html
-                    //     // $card.querySelector('.price').textContent = toCurrency(card.price)
-                    // }else{
-                    //     $card.innerHTML = "Card is empty"
-                    // }
                 })
             console.log(id)
         }

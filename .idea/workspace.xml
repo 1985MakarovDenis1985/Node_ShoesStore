@@ -2,59 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d5d5f8e-18f9-4c22-b5ef-10f5f0bfae86" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/product-edit.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/card.json" beforeDir="false" afterPath="$PROJECT_DIR$/db/card.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/10_shoe_item_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/10_shoe_item_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/11_shoe_item_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/11_shoe_item_5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/12_shoe_item_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/12_shoe_item_6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/13_shoe_item_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/13_shoe_item_7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/14_shoe_item_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/14_shoe_item_8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/15_sprite_brands.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/15_sprite_brands.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/16_bg_posts.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/16_bg_posts.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/17_bg_posts_comment.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/17_bg_posts_comment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/18_post_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/18_post_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/19_man.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/19_man.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/1_shoe_first.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/1_shoe_first.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/20_woman.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/20_woman.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/26_footer_sprite.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/26_footer_sprite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/27_footer_sprite_second.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/27_footer_sprite_second.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/28_news.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/28_news.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/29_jog.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/29_jog.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/2_shoe_third_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/2_shoe_third_2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/3_shoe_third_add.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/3_shoe_third_add.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/4_shoe_second.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/4_shoe_second.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/5_shoe_fourth.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/5_shoe_fourth.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/6_shoe_fift.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/6_shoe_fift.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/7_shoe_item_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/7_shoe_item_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/8_shoe_item_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/8_shoe_item_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/9_shoe_item_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/9_shoe_item_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/footer.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/footer.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/icon_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/icon_bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/line_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/line_logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/shoe_ico.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/shoe_ico.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/shoe_item_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/shoe_item_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/shoe_item_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/shoe_item_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/shoe_item_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/shoe_item_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/shoe_item_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/shoe_item_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/shoe_item_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/shoe_item_5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/shoe_item_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/shoe_item_6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/shoe_item_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/shoe_item_7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/shoe_item_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/shoe_item_8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/slider_1_sneakers_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/slider_1_sneakers_1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/slider_2_sneakers_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/slider_2_sneakers_2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/slider_3_sneakers_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/slider_3_sneakers_3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/slider_4_sneakers_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/slider_4_sneakers_4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/images/slider_5_sneakers_5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/slider_5_sneakers_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/db/products.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/new_app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/new_app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/add.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/products.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/add.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/add.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/card.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/card.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/header.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/header.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/product.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/product.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +71,7 @@
       <updated>1607451734316</updated>
       <workItem from="1607451735940" duration="14536000" />
       <workItem from="1607518792878" duration="106457000" />
-      <workItem from="1607982233081" duration="5919000" />
+      <workItem from="1607982233081" duration="21850000" />
     </task>
     <servers />
   </component>

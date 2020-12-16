@@ -1,70 +1,37 @@
-const {v4: uuidv4} = require('uuid'); // библиотека для генерации ID
-const fs = require('fs')
-const path = require('path')
+const {Schema, model} = require('mongoose')
 
-class Product {
-    constructor(title, price, priceDown, boxSale, sex, imgEl, desc, size=[]) {
-        this.title = title,
-            this.price = price,
-            this.priceDown = priceDown,
-            this.boxSale = boxSale,
-            this.sex = sex,
-            this.imgUrl = imgEl,
-            this.desc = desc,
-            this.size = size,
-            this.id = uuidv4()
+const product = new Schema({
+    title: {
+        type: String,
+        // required: true // говорит о том, что поле обязательно для модели
+    },
+    price: {
+        type: Number,
+        // required: true
+    },
+    imgUrl: {
+        type: String,
+    },
+    startPrice: {
+        type: Number,
+    },
+    boxSale: {
+        type: Number,
+    },
+    sex: {
+        type: String,
+        // required: true
+    },
+    desc: {
+        type: String,
+        // required: true
+    },
+    size: {
+        type: Array,
+        // required: true
     }
+})
 
-    toJSON() {
-        return {
-            title: this.title,
-            price: this.price,
-            priceDown: this.priceDown,
-            boxSale: this.boxSale,
-            sex: this.sex,
-            imgUrl: this.imgUrl,
-            desc: this.desc,
-            size: [this.size],
-            id: this.id
-        }
-    }
 
-    async save() {
-        const products = await Product.getAll()
-        products.push(this.toJSON())
-        return new Promise((res, rej) => {
-            fs.writeFile(
-                path.join(__dirname, '..', 'db', 'products.json'),
-                JSON.stringify(products),
-                (err) => {
-                    if (err) rej(err)
-                    else {
-                        res()
-                    }
-                }
-            )
-        })
-    }
-
-    static getAll() {
-        return new Promise((res, rej) => {
-            fs.readFile(
-                path.join(__dirname, '..', 'db', 'products.json'),
-                'utf-8',
-                (err, content) => {
-                    if (err) rej(err)
-                    else {
-                        res(JSON.parse(content))
-                    }
-                }
-            )
-        })
-    }
-
-    static async getById(id){
-        const products = await Product.getAll()
-        return products.find(el => el.id === id)
-    }
-}
-
-module.exports = Product
+// экспортируем модель: 1параметр - название модели, 2параметр - сама модель
+module.exports = model('Product', product)
