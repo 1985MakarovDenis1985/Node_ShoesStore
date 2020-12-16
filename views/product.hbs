@@ -33,6 +33,14 @@
             <div class="link_cover" id="link_cover"></div>
             <a class="link_edit " href="/products/{{product._id}}/edit?allow=true">Edit</a>
         </div>
+        <div class="clearfix"></div>
+
+        <div class="btn-buy btn-remove_box" id="btn_edit">
+            <form action="/products/remove" method="post">
+                <input type="hidden" name="id" value={{product._id}}>
+                <button class="btn-buy btn-remove" id="btn-remove">Remove</button>
+            </form>
+        </div>
     </div>
 </div>
 

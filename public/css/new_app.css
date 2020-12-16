@@ -227,6 +227,21 @@ input[type=file]{
     /*margin: -2px;*/
 }
 
+.btn-remove_box{
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+}
+.btn-remove{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: none;
+    background: transparent;
+}
+
 
 
 

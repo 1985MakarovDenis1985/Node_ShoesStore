@@ -17,7 +17,7 @@ router.get('/all', async (req, res) => {
 })
 
 router.get('/:id/edit', async (req, res) => {
-    if (!req.query.allow){
+    if (!req.query.allow) {
         return res.redirect('/')
     }
 
@@ -36,6 +36,15 @@ router.post('/edit', async (req, res) => {
     res.redirect('/products')
 })
 
+router.post('/remove', async (req, res) => {
+    try {
+        await Product.deleteOne({_id: req.body.id})
+        res.redirect('/products')
+    } catch (err) {
+        console.log(err)
+    }
+})
+
 router.get('/:id', async (req, res) => {
     const product = await Product.findById(req.params.id)
     res.render('product', {
@@ -46,8 +55,6 @@ router.get('/:id', async (req, res) => {
 })
 
 module.exports = router
-
-
 
 
 // function routerOfSortProd(url, sex = false) {
