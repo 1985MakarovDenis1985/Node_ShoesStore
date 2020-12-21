@@ -31,10 +31,10 @@ function countPercent(price, newPrice) {
 function createCard(product) {
     let shoeBox = createNewElement("div", "box_shoes", null, null, null);
     shoeBox.style.backgroundImage = "url(/img/" + product.imgUrl + ")";
-    let coast = createNewElement("p", "main_coast_shoe", "$" + product.price, null);
+    let coast = createNewElement("p", "main_coast_shoe prod-currency", +product.price, null);
 
-    let boxSale = createNewElement("div", "boxSale", "-"+countPercent(product.startPrice, product.price)+"%", null);
-    let coastDown = createNewElement("p", "down_coast_shoe", "$"+product.startPrice, null);
+    let boxSale = createNewElement("div", "boxSale", "-" + countPercent(product.startPrice, product.price) + "%", null);
+    let coastDown = createNewElement("p", "down_coast_shoe prod-currency", +product.startPrice, null);
 
     let sex = createNewElement("p", "sex_box_shoe", product.sex, null);
     let title = createNewElement("h5", "name_box_shoe", product.title);
@@ -48,10 +48,10 @@ function createCard(product) {
         "value": '/products/' + product._id
     }], null)
     let shoeBoxFull
-    if (!product.startPrice){
+    if (!product.startPrice) {
         shoeBoxFull = appChild(shoeBox, [coast, sex, title, showItem])
     } else {
-         shoeBoxFull = appChild(shoeBox, [coast, coastDown, sex, title, boxSale, showItem])
+        shoeBoxFull = appChild(shoeBox, [coast, coastDown, sex, title, boxSale, showItem])
     }
     return shoeBoxFull
 }
@@ -63,6 +63,9 @@ function render(products) {
     const to = current * per_page + per_page
     products.slice(from, to).map(el => {
         productsBox.appendChild(createCard(el))
+    })
+    document.querySelectorAll('.prod-currency').forEach(el => {
+        el.textContent = toCurrency(el.textContent)
     })
 }
 
@@ -107,8 +110,6 @@ async function getProducts(sex) {
 
 }
 
-// setTimeout(() => {
-
 const btn = document.getElementById("range_content_box")
 if (btn) {
     getProducts()
@@ -126,7 +127,6 @@ if (btn) {
         getProducts('children')
     })
 }
-// }, 500)
 
 const $card = document.querySelector('#card')
 if ($card) {
@@ -145,6 +145,13 @@ if ($card) {
         }
     })
 }
+
+// const toCurrency = price => {
+//     return new Intl.NumberFormat('en-US', {
+//         currency: 'USD',
+//         style: 'currency'
+//     }).format(price)
+// }
 
 
 

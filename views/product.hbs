@@ -16,9 +16,9 @@
                 <span>{{product.desc}}</span>
             </p>
         </h1>
-        <div class="new_price" id="new_price">${{product.price}}</div>
+        <div class="new_price prod-currency" id="new_price">{{product.price}}</div>
         {{#if product.startPrice}}
-            <div class="price_before" id="price_before">${{product.startPrice}}</div>
+            <div class="price_before prod-currency" id="price_before">{{product.startPrice}}</div>
             <div class="boxSale" id="product_percent">{{product.boxSale}}</div>
         {{/if}}
 
@@ -229,6 +229,5 @@
         let count = Math.ceil(newPrice * 100 / priceBefore);
         return +count
     }
-
     const btnEdit = document.getElementById("link_cover").style.display = "none"
 </script>

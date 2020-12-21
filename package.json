@@ -4,7 +4,8 @@
   "description": "redevelop sneakers store with node",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "dev": "nodemon --exec babel-node index.js  public/js/app.js"
   },
   "browserslist": [
     "> 1%",
@@ -14,10 +15,11 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.2",
+    "@babel/node": "^7.12.10",
     "@babel/plugin-transform-runtime": "^7.10.1",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
-    "@babel/runtime": "^7.10.2",
+    "@babel/runtime": "^7.12.5",
     "autoprefixer": "^9.8.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -26,12 +28,16 @@
     "css-loader": "^3.2.0",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.5.0",
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^6.0.0",
     "jest": "^26.6.3",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.13.0",
+    "nodemon": "^2.0.6",
     "path": "^0.12.7",
     "postcss-loader": "^3.0.0",
     "prop-types": "^15.7.2",
@@ -47,11 +53,7 @@
     "style-loader": "^1.0.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "enzyme-to-json": "^3.5.0",
-    "nodemon": "^2.0.6"
+    "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",

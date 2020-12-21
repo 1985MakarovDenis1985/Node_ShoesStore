@@ -29,7 +29,7 @@ router.post('/', async (req, res) => {
             size: arrOfSize,
         })
         await product.save()
-        res.redirect('/card')
+        res.redirect('/products')
     } catch (err) {
         console.log(err)
     }

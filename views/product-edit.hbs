@@ -26,15 +26,17 @@
 <!--            </div>-->
 <!--        </div>-->
 
-<div class="add_container">
+<div class="add_container ">
     <div class="add_form_container" id="">
         <form method="post" action="/products/edit" class="form_block">
-            <div class="left_add_block">
+
+
+            <div class="left_add_block_add">
                 <img class="temp_img" id="temp_img" src="/img/{{product.imgUrl}}" alt=""/>
                 <input type="file" id="imgUrl" name="imgUrl" value="{{product.imgUrl}}" multiple/>
             </div>
 
-            <div class="right_add_block">
+            <div class="right_add_block_add">
                 <input type="text" placeholder="title" name="title" value="{{product.title}}"/>
                 <input type="text" placeholder="price" name="price" value="{{product.price}}"/>
                 <input type="text" placeholder="first price" name="startPrice" value="{{product.startPrice}}"/>

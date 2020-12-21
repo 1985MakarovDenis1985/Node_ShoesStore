@@ -80,3 +80,10 @@ async function start (){
 start()
 
 
+export const toCurrency = price => {
+    return new Intl.NumberFormat('en-US', {
+        currency: 'USD',
+        style: 'currency'
+    }).format(price)
+}
+

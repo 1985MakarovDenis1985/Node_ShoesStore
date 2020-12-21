@@ -30,17 +30,18 @@
     {{#if products.length}}
 
         {{#each products}}
-            <div class="block-products_item">
-                <div style="background-image: url('/img/{{imgUrl}}')" class="products_item-img"></div>
-                <div class="products_item-title">{{title}}</div>
-                <div class="products_item-price">{{price}}</div>
-                <div class="products_item-size">{{size}}</div>
-                <div class="products_item-count">{{count}}</div>
+                <div class="block-products_item">
+                    <div style="background-image: url('/img/{{imgUrl}}')" class="products_item-img"></div>
+                    <div class="products_item-title">{{title}}</div>
+                    <div class="products_item-price">{{price}}</div>
+                    <div class="products_item-size">{{size}}</div>
+                    <div class="products_item-count">{{count}}</div>
 
-                <div class="btn-remove_block">
-                    <button class="btn btn-small btn-remove" data-id="{{id}}">Remove course</button>
+                    <div class="btn-remove_block">
+                        <button class="btn btn-small btn-remove" data-id="{{id}}">Remove course</button>
+                    </div>
                 </div>
-            </div>
+
         {{/each}}
         <div class="buy_overall">
             <p class="overall-price"><strong>Overall: <span class="price">${{price}}</span></strong></p>
