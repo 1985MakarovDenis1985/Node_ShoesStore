@@ -29,8 +29,19 @@ const product = new Schema({
     size: {
         type: Array,
         // required: true
+    },
+    userId: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
     }
 })
+
+// product.method('toClient', function (){
+//     const product = this.toObject()
+//     product.id = product._id
+//     delete product._id
+//     return product
+// })
 
 
 // экспортируем модель: 1параметр - название модели, 2параметр - сама модель

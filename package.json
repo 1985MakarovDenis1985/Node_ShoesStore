@@ -2,10 +2,8 @@
   "name": "Node",
   "version": "1.0.0",
   "description": "redevelop sneakers store with node",
-  "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "dev": "nodemon --exec babel-node index.js  public/js/app.js"
+    "dev": "nodemon index.js"
   },
   "browserslist": [
     "> 1%",

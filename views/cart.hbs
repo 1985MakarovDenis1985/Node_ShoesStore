@@ -33,19 +33,22 @@
                 <div class="block-products_item">
                     <div style="background-image: url('/img/{{imgUrl}}')" class="products_item-img"></div>
                     <div class="products_item-title">{{title}}</div>
-                    <div class="products_item-price">{{price}}</div>
+                    <div class="products_item-price prod-currency">{{price}}</div>
                     <div class="products_item-size">{{size}}</div>
                     <div class="products_item-count">{{count}}</div>
 
                     <div class="btn-remove_block">
-                        <button class="btn btn-small btn-remove" data-id="{{id}}">Remove course</button>
+                        <button class="btn btn-small btn-remove" data-id="{{_id}}">Remove course</button>
                     </div>
                 </div>
 
         {{/each}}
         <div class="buy_overall">
-            <p class="overall-price"><strong>Overall: <span class="price">${{price}}</span></strong></p>
-            <button class="btn_overall-price" id="btn_overall-price">BUY</button>
+            <p class="overall-price"><strong>Overall: <span class="price prod-currency">{{price}}</span></strong></p>
+
+            <form action="/orders" method="post">
+                <button class="create-order" id="create-order" type="submit">BUY</button>
+            </form>
         </div>
 
     {{else}}

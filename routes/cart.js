@@ -5,7 +5,9 @@ const Product = require('../models/product')
 
 function mapCartItems(cart) {
     return cart.items.map(el => ({
-        ...el.productId._doc, count: el.count
+        ...el.productId._doc,
+        id: el.productId.id,
+        count: el.count
     }))
 }
 
@@ -18,7 +20,6 @@ function computePrice(products) {
 router.post('/add', async (req, res) => {
     const prod = await Product.findById(req.body.id)
     await req.user.addToCart(prod)
-    console.log(prod)
     res.redirect('/cart')
 })
 
@@ -37,8 +38,24 @@ router.get('/', async (req, res) => {
 })
 
 router.delete('/remove/:id', async (req, res) => {
-    const prod = await Card.remove(req.params.id)
-    res.status(200).json(prod)
+    await req.user.removeFromCart(req.params.id)
+    const user = await req.user.populate('cart.items.courseId').execPopulate()
+    const products = mapCartItems(user.cart)
+    const cart = {
+        products,
+        price: computePrice(products)
+    }
+    res.status(200).json(cart)
+})
+router.delete('/product/:id', async (req, res) => {
+    await req.user.removeFromCart(req.params.id)
+    const user = await req.user.populate('cart.items.courseId').execPopulate()
+    const products = mapCartItems(user.cart)
+    const cart = {
+        products,
+        price: computePrice(products)
+    }
+    res.status(200).json(cart)
 })
 
 

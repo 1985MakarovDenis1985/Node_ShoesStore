@@ -134,11 +134,11 @@ if ($card) {
         if (event.target.classList.contains('btn-remove')) {
             const id = event.target.dataset.id
 
-            fetch('/card/remove/' + id, {
+            fetch('/cart/remove/' + id, {
                 method: 'delete',
             }).then((res) => res.json())
                 .then(card => {
-                    window.location.href = "/card"
+                    window.location.href = "/cart"
                     console.log(card)
                 })
             console.log(id)
@@ -146,14 +146,15 @@ if ($card) {
     })
 }
 
-// const toCurrency = price => {
-//     return new Intl.NumberFormat('en-US', {
-//         currency: 'USD',
-//         style: 'currency'
-//     }).format(price)
-// }
-
-
+const toCurrency = price => {
+    return new Intl.NumberFormat('en-US', {
+        currency: 'USD',
+        style: 'currency'
+    }).format(price)
+}
+document.querySelectorAll('.prod-currency').forEach(el => {
+    el.textContent = toCurrency(el.textContent)
+})
 
 
 

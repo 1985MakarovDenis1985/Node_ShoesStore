@@ -11,7 +11,7 @@ const productsRouter = require('./routes/products')
 const addRouter = require('./routes/add')
 const aboutRouter = require('./routes/about')
 const cardRouter = require('./routes/cart')
-const testRouter = require('./routes/test')
+const ordersRouter = require('./routes/orders')
 
 const User = require('./models/users')
 
@@ -44,7 +44,7 @@ app.use('/add', addRouter)
 app.use('/cart', cardRouter)
 app.use('/login', loginRouter)
 app.use('/about' ,aboutRouter)
-app.use('/test' ,testRouter)
+app.use('/orders' ,ordersRouter)
 
 
 
@@ -79,11 +79,4 @@ async function start (){
 }
 start()
 
-
-export const toCurrency = price => {
-    return new Intl.NumberFormat('en-US', {
-        currency: 'USD',
-        style: 'currency'
-    }).format(price)
-}
 
