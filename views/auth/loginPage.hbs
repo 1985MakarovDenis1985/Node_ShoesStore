@@ -27,6 +27,12 @@
         <div id="registration" class="auth_box registration-box">
             <form action="/auth/registration" method="post">
                 <div class="input-field ">
+                    <input name="name" id="name" type="text" class="validate registration_forms" required>
+                    <label for="name" class="registration_label">Name</label>
+                    <span class="helper-text" data-error="wrong"></span>
+                </div>
+
+                <div class="input-field ">
                     <input name="email" id="email" type="email" class="validate registration_forms" required>
                     <label for="email" class="registration_label">Email</label>
                     <span class="helper-text" data-error="wrong"></span>
