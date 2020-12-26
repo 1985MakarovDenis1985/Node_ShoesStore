@@ -48,7 +48,7 @@ router.post('/', async (req, res) => {
 
         await orders.save()
         await req.user.clearCart()
-        res.redirect('/cart')
+        res.redirect('/orders')
 
     } catch (err) {
         console.log(err)

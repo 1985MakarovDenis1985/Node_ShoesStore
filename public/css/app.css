@@ -145,6 +145,10 @@
     justify-content: space-around
 }
 
+.nav_item-active{
+    background: #ff7373;
+}
+
 .header_nav_bar > li:nth-child(2) {
     -webkit-animation-delay: 4.6s;
     animation-delay: 4.6s

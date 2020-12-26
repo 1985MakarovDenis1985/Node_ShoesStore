@@ -2,22 +2,73 @@
     <div class="header_nav">
         <nav>
             <ul class="header_nav_bar">
-                <li class="nav_item item_1"><a href="/">Home</a></li>
-                <li class="nav_item item_2"><a href="/products">Products</a></li>
-                <li class="nav_item"><a href="/add">Add Product</a></li>
-                <li class="nav_item"><a href="/about">About Us</a></li>
-                <li class="nav_item"><a href="/orders">Orders</a></li>
+                {{#if isHome}}
+                    <li class="nav_item nav_item-active item_1"><a href="/">Home</a></li>
+                {{else}}
+                    <li class="nav_item item_1 "><a href="/">Home</a></li>
+                {{/if}}
+
+                {{#if isProducts}}
+                    <li class="nav_item nav_item-active item_2"><a href="/products">Products</a></li>
+                {{else}}
+                    <li class="nav_item item_2"><a href="/products">Products</a></li>
+                {{/if}}
+
+                {{#if isAbout}}
+                    <li class="nav_item nav_item-active"><a href="/about">About Us</a></li>
+                {{else}}
+                    <li class="nav_item"><a href="/about">About Us</a></li>
+                {{/if}}
+
+                {{#if isAuth}}
+                    {{#if isAdd}}
+                        <li class="nav_item nav_item-active"><a href="/add">Add Product</a></li>
+                    {{else}}
+                        <li class="nav_item"><a href="/add">Add Product</a></li>
+                    {{/if}}
+
+                    {{#if isOrder}}
+                        <li class="nav_item nav_item-active"><a href="/orders">Orders</a></li>
+                    {{else}}
+                        <li class="nav_item"><a href="/orders">Orders</a></li>
+                    {{/if}}
+                {{else}}
+                {{/if}}
 
             </ul>
             <ul class="header_nav_bar_right">
-                <li class="nav_item" id="nav_item_cart">
-                    <a href="/cart">
-                        <i class="basket fas fa-shopping-basket" id="basket"></i>
-                        <span id="cart_summarise_prise">$0</span>
-                    </a>
 
-                </li>
-                <li class="nav_item"><a href="/login">Login</a></li>
+                {{#if isAuth}}
+                    {{#if isCard}}
+                        <li class="nav_item nav_item-active" id="nav_item_cart">
+                            <a href="/cart">
+                                <i class="basket fas fa-shopping-basket" id="basket"></i>
+                                <span id="cart_summarise_prise">$0</span>
+                            </a>
+                        </li>
+                    {{else}}
+                        <li class="nav_item" id="nav_item_cart">
+                            <a href="/cart">
+                                <i class="basket fas fa-shopping-basket" id="basket"></i>
+                                <span id="cart_summarise_prise">$0</span>
+                            </a>
+                        </li>
+                    {{/if}}
+
+                    {{#if isLogin}}
+                        <li class="nav_item nav_item-active"><a href="/auth/logout">LogOut</a></li>
+                    {{else}}
+                        <li class="nav_item"><a href="/auth/logout">LogOut</a></li>
+                    {{/if}}
+                {{else}}
+                    {{#if isLogin}}
+                        <li class="nav_item nav_item-active"><a href="/auth/login">Login</a></li>
+                    {{else}}
+                        <li class="nav_item"><a href="/auth/login">Login</a></li>
+                    {{/if}}
+                {{/if}}
+
+
             </ul>
         </nav>
     </div>
