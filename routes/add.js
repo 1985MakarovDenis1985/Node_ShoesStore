@@ -1,16 +1,17 @@
 const {Router} = require('express')
 const router = Router()
+const auth = require('../middleware/auth')
 const Product = require('../models/product')
 
 
-router.get('/', (req, res, next) => {
+router.get('/', auth, (req, res, next) => {
     res.render('add', {
         title: "Add new course",
         isAdd: true
     })
 })
 
-router.post('/', async (req, res) => {
+router.post('/', auth, async (req, res) => {
     const arrOfSize = []
     req.body.size.trim().split(',').map(el => {
         arrOfSize.push(+el)

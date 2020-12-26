@@ -255,6 +255,20 @@ input[type=file] {
     background: transparent;
 }
 
+.btn_err_auth{
+    font-family: TruenoLt;
+    color: red;
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 15%;
+    opacity: 0;
+    transition: .5s;
+}
+.btn_err_auth-active{
+    margin-top: 10%;
+    opacity: 1;
+}
+
 
 /*EDIT*/
 

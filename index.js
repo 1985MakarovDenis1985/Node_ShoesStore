@@ -5,7 +5,9 @@ const Handlebars = require('handlebars')
 const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
 const mongoose = require('mongoose')
 const session = require('express-session')
+const MongoStore = require('connect-mongodb-session')(session)
 const varMiddleware = require('./middleware/variables')
+const MONGODB_URI = "mongodb+srv://admin:admin@cluster0.wn2yx.mongodb.net/shop"
 
 const homeRoutes = require('./routes/home')
 const authRouter = require('./routes/auth')
@@ -15,14 +17,16 @@ const aboutRouter = require('./routes/about')
 const cardRouter = require('./routes/cart')
 const ordersRouter = require('./routes/orders')
 
-const User = require('./models/users')
 
 const app = express()
-
 const hbs = exphbs.create({
     defaultLayout: 'main',
     extname: 'hbs',
     handlebars: allowInsecurePrototypeAccess(Handlebars) // решает проблемы с доступом
+})
+const store = new MongoStore({
+    collection: 'sessions',
+    uri: MONGODB_URI
 })
 
 app.engine('hbs', hbs.engine)
@@ -42,7 +46,8 @@ app.use(express.urlencoded({extended: true}))
 app.use(session({
     secret: 'secret',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    store
 }))
 app.use(varMiddleware)
 
@@ -57,11 +62,9 @@ app.use('/orders' ,ordersRouter)
 
 
 const PORT = process.env.PORT || 3000
-
 async function start (){
     try {
-        const url = "mongodb+srv://admin:admin@cluster0.wn2yx.mongodb.net/shop"
-        await mongoose.connect(url, { // without warnings
+        await mongoose.connect(MONGODB_URI, { // without warnings
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useFindAndModify: false
@@ -76,7 +79,6 @@ async function start (){
         //     })
         //     await user.save()
         // }
-
 
         app.listen(PORT, () => {
             console.log(`server on port:${3000} has been started...`)

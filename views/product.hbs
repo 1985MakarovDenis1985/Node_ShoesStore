@@ -22,25 +22,43 @@
             <div class="boxSale" id="product_percent">{{product.boxSale}}</div>
         {{/if}}
 
-
-        <form action="/cart/add" method="post">
-            <input type="hidden" name="id" value="{{product._id}}">
-            <button type="submit" class="btn-buy btn btn-primary">Byu</button>
-        </form>
-        <div class="clearfix"></div>
-
-        <div class="btn-buy btn_edit" id="btn_edit">
-            <div class="link_cover" id="link_cover"></div>
-            <a class="link_edit " href="/products/{{product._id}}/edit?allow=true">Edit</a>
-        </div>
-        <div class="clearfix"></div>
-
-        <div class="btn-buy btn-remove_box" id="btn_edit">
-            <form action="/products/remove" method="post">
-                <input type="hidden" name="id" value={{product._id}}>
-                <button class="btn-buy btn-remove" id="btn-remove">Remove</button>
+        {{#if isAuth}}
+            <form action="/cart/add" method="post">
+                <input type="hidden" name="id" value="{{product._id}}">
+                <button type="submit" class="btn-buy btn btn-primary">Byu</button>
             </form>
-        </div>
+            <div class="clearfix"></div>
+
+            <div class="btn-buy btn_edit" id="btn_edit">
+                <div class="link_cover" id="link_cover"></div>
+                <a class="link_edit " href="/products/{{product._id}}/edit?allow=true">Edit</a>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="btn-buy btn-remove_box" id="btn_edit">
+                <form action="/products/remove" method="post">
+                    <input type="hidden" name="id" value={{product._id}}>
+                    <button class="btn-buy btn-remove" id="btn-remove">Remove</button>
+                </form>
+            </div>
+
+        {{else}}
+            <p id="btnProductsErrAuth" class="btn_err_auth">You can do it only after registration</p>
+            <button style="background:gray" class="btn-product btn-buy btn btn-primary">Byu</button>
+            <div class="clearfix"></div>
+
+            <div style="background:gray" class="btn-product btn-buy btn_edit" id="btn_edit">
+                <div class="link_cover" id="link_cover"></div>
+                <a class="link_edit " href="#">Edit</a>
+            </div>
+            <div class="clearfix"></div>
+
+            <div style="background:gray" class="btn-product btn-buy btn-remove_box" id="btn_edit">
+                <button class="btn-buy btn-remove" id="btn-remove">Remove</button>
+            </div>
+        {{/if}}
+
+
     </div>
 </div>
 
@@ -219,16 +237,27 @@
 <script>
 
     const percentBox = document.getElementById("product_percent")
-    const priceBefore =  document.getElementById("price_before")
+    const priceBefore = document.getElementById("price_before")
     const percentSale = countPercent({{product.startPrice}}, {{product.price}})
 
     if (percentSale !== Infinity) {
         percentBox.innerText = `- ${percentSale}%`
     }
+
     function countPercent(priceBefore, newPrice) {
         let count = Math.ceil(newPrice * 100 / priceBefore);
         return +count
     }
+
     const btnEdit = document.getElementById("link_cover").style.display = "none"
+    const btnProduct = Array.from(document.getElementsByClassName('btn-product'))
+    btnProduct.map(el => {
+        el.addEventListener("click", () => {
+            document.getElementById('btnProductsErrAuth').classList.add('btn_err_auth-active')
+            setTimeout(() => {
+                document.getElementById('btnProductsErrAuth').classList.remove('btn_err_auth-active')
+            }, 2000)
+        })
+    })
 
 </script>

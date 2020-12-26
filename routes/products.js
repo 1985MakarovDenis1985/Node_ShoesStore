@@ -1,5 +1,6 @@
 const Router = require('express')
 const router = Router()
+const auth = require('../middleware/auth')
 const Product = require('../models/product')
 
 router.get('/', async (req, res) => {
@@ -16,7 +17,7 @@ router.get('/all', async (req, res) => {
     res.send(products)
 })
 
-router.get('/:id/edit', async (req, res) => {
+router.get('/:id/edit', auth, async (req, res) => {
     if (!req.query.allow) {
         return res.redirect('/')
     }
@@ -28,7 +29,7 @@ router.get('/:id/edit', async (req, res) => {
     })
 })
 
-router.post('/edit', async (req, res) => {
+router.post('/edit', auth, async (req, res) => {
     const {id} = req.body
     delete req.body.id // убираем идентификатор так как mongo добавляет его автоматом через _id (убираем что бы не создавать лишнее поле id)
 
@@ -36,7 +37,7 @@ router.post('/edit', async (req, res) => {
     res.redirect('/products')
 })
 
-router.post('/remove', async (req, res) => {
+router.post('/remove', auth, async (req, res) => {
     try {
         await Product.deleteOne({_id: req.body.id})
         res.redirect('/products')
