@@ -1,58 +1,79 @@
-
-
 <div class="login_container">
     <input type="radio" id="loginPage" name="login-page" checked>
-    <input type="radio" id="registrationPage"  name="login-page">
+    <input type="radio" id="registrationPage" name="login-page">
     <label class="label label-login" for="loginPage">Log in</label>
     <label class="label label-registration" for="registrationPage">Registration</label>
 
-        <div id="login" class="auth_box login-box">
-                <form action="/auth/login" method="post">
-                    <div class="input-field ">
-                        <input name="email" id="email" type="email" class="validate registration_forms" required>
-                        <label for="email" class="registration_label">Email</label>
-                        <span class="helper-text" data-error="wrong"></span>
-                    </div>
+    <div id="login" class="auth_box login-box">
 
-                    <div class="input-field ">
-                        <input name="password" id="password" type="password" class="validate registration_forms" required>
-                        <label for="password" class="registration_label">Password</label>
-                        <span class="helper-text" data-error="write cost" ></span>
-                    </div>
+        {{#if registrationError}}
+            <p class="login-error">{{registrationError}}</p>
+        {{/if}}
+        {{#if loginError}}
+            <p class="login-error">{{loginError}}</p>
+        {{/if}}
+        {{#if passwordError}}
+            <p class="login-error">{{passwordError}}</p>
+        {{/if}}
 
-                    <input type="hidden" name="_csrf" value="{{csrf}}">
-                    <button class="btn-primary btn-registration" type="submit">Log in</button>
-                </form>
-        </div>
+        <form action="/auth/login" method="post">
+            <div class="input-field ">
+                <input name="email" id="email" type="email" class="validate registration_forms" required>
+                <label for="email" class="registration_label">Email</label>
+                <span class="helper-text" data-error="wrong"></span>
+            </div>
 
-        <div id="registration" class="auth_box registration-box">
-            <form action="/auth/registration" method="post">
-                <div class="input-field ">
-                    <input name="name" id="name" type="text" class="validate registration_forms" required>
-                    <label for="name" class="registration_label">Name</label>
-                    <span class="helper-text" data-error="wrong"></span>
-                </div>
+            <div class="input-field ">
+                <input name="password" id="password" type="password" class="validate registration_forms" required>
+                <label for="password" class="registration_label">Password</label>
+                <span class="helper-text" data-error="write cost"></span>
+            </div>
 
-                <div class="input-field ">
-                    <input name="email" id="email" type="email" class="validate registration_forms" required>
-                    <label for="email" class="registration_label">Email</label>
-                    <span class="helper-text" data-error="wrong"></span>
-                </div>
+            <input type="hidden" name="_csrf" value="{{csrf}}">
+            <button class="btn-primary btn-registration" type="submit">Log in</button>
+        </form>
+    </div>
 
-                <div class="input-field ">
-                    <input name="password" id="rpassword" type="password" class="validate registration_forms" required>
-                    <label for="rpassword" class="registration_label">Password</label>
-                    <span class="helper-text" data-error="write cost" ></span>
-                </div>
 
-                <div class="input-field ">
-                    <input name="confirm" id="confirm" type="password" class="validate registration_forms" required>
-                    <label for="confirm" class="registration_label">Repeat password</label>
-                    <span class="helper-text" data-error="write cost" ></span>
-                </div>
+    <div id="registration" class="auth_box registration-box">
 
-                <input type="hidden" name="_csrf" value="{{csrf}}">
-                <button class="btn-primary btn-registration" type="submit">Log in</button>
-            </form>
-        </div>
+        {{#if registrationError}}
+            <p class="login-error">{{registrationError}}</p>
+        {{/if}}
+        {{#if loginError}}
+            <p class="login-error">{{loginError}}</p>
+        {{/if}}
+        {{#if passwordError}}
+            <p class="login-error">{{passwordError}}</p>
+        {{/if}}
+
+        <form action="/auth/registration" method="post">
+            <div class="input-field ">
+                <input name="name" id="name" type="text" class="validate registration_forms" required>
+                <label for="name" class="registration_label">Name</label>
+                <span class="helper-text" data-error="wrong"></span>
+            </div>
+
+            <div class="input-field ">
+                <input name="email" id="email" type="email" class="validate registration_forms" required>
+                <label for="email" class="registration_label">Email</label>
+                <span class="helper-text" data-error="wrong"></span>
+            </div>
+
+            <div class="input-field ">
+                <input name="password" id="rpassword" type="password" class="validate registration_forms" required>
+                <label for="rpassword" class="registration_label">Password</label>
+                <span class="helper-text" data-error="write cost"></span>
+            </div>
+
+            <div class="input-field ">
+                <input name="confirm" id="confirm" type="password" class="validate registration_forms" required>
+                <label for="confirm" class="registration_label">Repeat password</label>
+                <span class="helper-text" data-error="write cost"></span>
+            </div>
+
+            <input type="hidden" name="_csrf" value="{{csrf}}">
+            <button class="btn-primary btn-registration" type="submit">Log in</button>
+        </form>
+    </div>
 </div>

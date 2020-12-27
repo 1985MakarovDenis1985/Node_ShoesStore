@@ -41,13 +41,27 @@ router.get('/', auth, async (req, res) => {
 
 router.delete('/remove/:id', auth, async (req, res) => {
     await req.user.removeFromCart(req.params.id)
-    const user = await req.user.populate('cart.items.courseId').execPopulate()
+    const user = await req.user.populate('cart.items.productId').execPopulate()
     const products = mapCartItems(user.cart)
     const cart = {
         products,
         price: computePrice(products)
     }
     res.status(200).json(cart)
+})
+
+router.get('/sum', async (req, res) => {
+    if (req.user){
+        const user = await req.user
+            .populate('cart.items.productId')
+            .execPopulate()
+        const products = mapCartItems(user.cart)
+        const sum = computePrice(products)
+        res.status(200).json(sum)
+    } else {
+        res.send('0')
+    }
+
 })
 
 // router.delete('/product/:id', auth, async (req, res) => {

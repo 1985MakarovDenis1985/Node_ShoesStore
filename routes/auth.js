@@ -6,13 +6,16 @@ const User = require('../models/users')
 router.get('/login', async (req, res) => {
     res.render('auth/loginPage', {
         title: 'Login page',
-        isLogin: true
+        isLogin: true,
+        registrationError: req.flash('registrationError'),
+        loginError: req.flash('loginError'),
+        passwordError: req.flash('passwordError')
     })
 })
 
 router.get('/logout', async (req, res) => {
     req.session.destroy(() => {
-        res.redirect('/auth/login#login')
+        res.redirect('/auth/login')
     })
 })
 
@@ -35,9 +38,11 @@ router.post('/login', async (req, res) => {
                     }
                 })
             }else {
+                req.flash('loginError', 'Wrong password')
                 res.redirect('/auth/login#login')
             }
         } else {
+            req.flash('passwordError', 'User has not found')
             res.redirect('/auth/login#login')
         }
 
@@ -56,7 +61,8 @@ router.post('/registration', async (req, res) => {
         const hashPassword = await bcrypt.hash(password, 11)
 
         if (candidate) {
-            res.redirect('/auth/registration')
+            req.flash('registrationError', 'User has already exist')
+            res.redirect('/auth/login')
         } else {
             const user = new User({
                 name,

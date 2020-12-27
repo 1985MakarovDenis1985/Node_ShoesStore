@@ -8,6 +8,7 @@ const session = require('express-session')
 const MongoStore = require('connect-mongodb-session')(session)
 const varMiddleware = require('./middleware/variables')
 const csrf = require('csurf')
+const flash = require('connect-flash')
 const userMiddleware = require('./middleware/user')
 const MONGODB_URI = "mongodb+srv://admin:admin@cluster0.wn2yx.mongodb.net/shop"
 
@@ -54,6 +55,7 @@ app.use(session({
 app.use(csrf())
 app.use(varMiddleware)
 app.use(userMiddleware)
+app.use(flash())
 
 app.use('/', homeRoutes)
 app.use('/products', productsRouter)

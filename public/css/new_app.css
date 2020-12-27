@@ -432,7 +432,6 @@ input[type=file] {
     transition: .5s;
     z-index: 1;
     opacity: 0;
-
 }
 
 #loginPage, #registrationPage{
@@ -508,4 +507,24 @@ input[type=file] {
 }
 .btn-registration:hover{
     background: #FEFEDF;
+}
+
+.login-error{
+    position: relative;
+    text-align: center;
+    animation-name: login_error;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+    color: red;
+    font-family: TruenoLt;
+    font-size: 25px;
+}
+
+@keyframes login_error {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
