@@ -7,6 +7,7 @@ const mongoose = require('mongoose')
 const session = require('express-session')
 const MongoStore = require('connect-mongodb-session')(session)
 const varMiddleware = require('./middleware/variables')
+const csrf = require('csurf')
 const userMiddleware = require('./middleware/user')
 const MONGODB_URI = "mongodb+srv://admin:admin@cluster0.wn2yx.mongodb.net/shop"
 
@@ -50,6 +51,7 @@ app.use(session({
     saveUninitialized: false,
     store
 }))
+app.use(csrf())
 app.use(varMiddleware)
 app.use(userMiddleware)
 

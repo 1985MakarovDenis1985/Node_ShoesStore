@@ -45,6 +45,8 @@
                 <textarea class="desc" id="" cols="30" rows="10" placeholder="desc"
                           name="desc">{{product.desc}}</textarea>
                 <input type="hidden" name="id" value="{{product.id}}">
+
+                <input type="hidden" name="_csrf" value="{{csrf}}">
                 <button type="submit" id="temp_btn_add">ADD</button>
             </div>
         </form>

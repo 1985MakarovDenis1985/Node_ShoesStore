@@ -1,31 +1,31 @@
 <div class="card-box" id="card">
-    <div class="over_slider_text over_slider_text_login">
-        <p class="over_slider_text_word">Y</p>
-        <p class="over_slider_text_word">O</p>
-        <p class="over_slider_text_word">U</p>
-        <p class="over_slider_text_word">R</p>
-        <p class="over_slider_text_word"></p>
-        <p class="over_slider_text_word" style="margin-left: 10px">O</p>
-        <p class="over_slider_text_word" style="margin-left: 0px">R</p>
-        <p class="over_slider_text_word">D</p>
-        <p class="over_slider_text_word">E</p>
-        <p class="over_slider_text_word">R</p>
-        <p class="over_slider_text_word">S</p>
+<!--    <div class="over_slider_text over_slider_text_login">-->
+<!--        <p class="over_slider_text_word">Y</p>-->
+<!--        <p class="over_slider_text_word">O</p>-->
+<!--        <p class="over_slider_text_word">U</p>-->
+<!--        <p class="over_slider_text_word">R</p>-->
+<!--        <p class="over_slider_text_word"></p>-->
+<!--        <p class="over_slider_text_word" style="margin-left: 10px">O</p>-->
+<!--        <p class="over_slider_text_word" style="margin-left: 0px">R</p>-->
+<!--        <p class="over_slider_text_word">D</p>-->
+<!--        <p class="over_slider_text_word">E</p>-->
+<!--        <p class="over_slider_text_word">R</p>-->
+<!--        <p class="over_slider_text_word">S</p>-->
 
-    </div>
-    <div class="over_slider_text_shadow">
-        <p class=" over_slider_text_word_shadow">Y</p>
-        <p class=" over_slider_text_word_shadow">O</p>
-        <p class=" over_slider_text_word_shadow">U</p>
-        <p class=" over_slider_text_word_shadow">R</p>
-        <p class=" over_slider_text_word_shadow"></p>
-        <p class=" over_slider_text_word_shadow" style="margin-left: 10px">O</p>
-        <p class=" over_slider_text_word_shadow" style="margin-left: 0px;">R</p>
-        <p class=" over_slider_text_word_shadow">D</p>
-        <p class=" over_slider_text_word_shadow">E</p>
-        <p class=" over_slider_text_word_shadow">R</p>
-        <p class=" over_slider_text_word_shadow">S</p>
-    </div>
+<!--    </div>-->
+<!--    <div class="over_slider_text_shadow">-->
+<!--        <p class=" over_slider_text_word_shadow">Y</p>-->
+<!--        <p class=" over_slider_text_word_shadow">O</p>-->
+<!--        <p class=" over_slider_text_word_shadow">U</p>-->
+<!--        <p class=" over_slider_text_word_shadow">R</p>-->
+<!--        <p class=" over_slider_text_word_shadow"></p>-->
+<!--        <p class=" over_slider_text_word_shadow" style="margin-left: 10px">O</p>-->
+<!--        <p class=" over_slider_text_word_shadow" style="margin-left: 0px;">R</p>-->
+<!--        <p class=" over_slider_text_word_shadow">D</p>-->
+<!--        <p class=" over_slider_text_word_shadow">E</p>-->
+<!--        <p class=" over_slider_text_word_shadow">R</p>-->
+<!--        <p class=" over_slider_text_word_shadow">S</p>-->
+<!--    </div>-->
 
     {{#if products.length}}
 
@@ -38,7 +38,11 @@
                     <div class="products_item-count">{{count}}</div>
 
                     <div class="btn-remove_block">
-                        <button class="btn btn-small btn-remove" data-id="{{_id}}">Remove course</button>
+                        <button
+                                class="btn btn-small btn-remove"
+                                data-id="{{_id}}"
+                                data-csrf="{{@root.csrf}}"
+                        >Remove course</button>
                     </div>
                 </div>
 
@@ -47,6 +51,7 @@
             <p class="overall-price"><strong>Overall: <span class="price prod-currency">{{price}}</span></strong></p>
 
             <form action="/orders" method="post">
+                <input type="hidden" name="_csrf" value="{{csrf}}">
                 <button class="create-order" id="create-order" type="submit">BUY</button>
             </form>
         </div>

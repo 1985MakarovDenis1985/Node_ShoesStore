@@ -25,6 +25,7 @@
         {{#if isAuth}}
             <form action="/cart/add" method="post">
                 <input type="hidden" name="id" value="{{product._id}}">
+                <input type="hidden" name="_csrf" value="{{csrf}}">
                 <button type="submit" class="btn-buy btn btn-primary">Byu</button>
             </form>
             <div class="clearfix"></div>
@@ -38,6 +39,8 @@
             <div class="btn-buy btn-remove_box" id="btn_edit">
                 <form action="/products/remove" method="post">
                     <input type="hidden" name="id" value={{product._id}}>
+
+                    <input type="hidden" name="_csrf" value="{{csrf}}">
                     <button class="btn-buy btn-remove" id="btn-remove">Remove</button>
                 </form>
             </div>
