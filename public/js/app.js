@@ -64,9 +64,6 @@ function render(products) {
     products.slice(from, to).map(el => {
         productsBox.appendChild(createCard(el))
     })
-    document.querySelectorAll('.prod-currency').forEach(el => {
-        el.textContent = toCurrency(el.textContent)
-    })
 }
 
 function renderPag(products) {
@@ -167,13 +164,23 @@ const toDate = date => {
     }).format(new Date(date))
 }
 
-document.querySelectorAll('.prod-currency').forEach(el => {
-    el.textContent = toCurrency(el.textContent)
-})
+
+fetch(`/cart/sum`)
+    .then(data => data.json())
+    .then(data => {
+        const navCart = document.getElementById('cart_summarise_prise')
+        if (navCart) {
+            navCart.textContent = data
+        }
+        document.querySelectorAll('.prod-currency').forEach(el => {
+            el.textContent = toCurrency(el.textContent)
+        })
+    })
 
 document.querySelectorAll('.date').forEach(el => {
     el.textContent = toDate(el.textContent)
 })
+
 
 
 

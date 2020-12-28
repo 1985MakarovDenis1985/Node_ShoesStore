@@ -43,14 +43,14 @@
                         <li class="nav_item nav_item-active" id="nav_item_cart">
                             <a href="/cart">
                                 <i class="basket fas fa-shopping-basket" id="basket"></i>
-                                <span id="cart_summarise_prise" class="prod-currency">0</span>
+                                <span id="cart_summarise_prise" class="prod-currency"></span>
                             </a>
                         </li>
                     {{else}}
                         <li class="nav_item" id="nav_item_cart">
                             <a href="/cart">
                                 <i class="basket fas fa-shopping-basket" id="basket"></i>
-                                <span id="cart_summarise_prise" class="prod-currency">0</span>
+                                <span id="cart_summarise_prise" class="prod-currency"></span>
                             </a>
                         </li>
                     {{/if}}
@@ -97,13 +97,13 @@
     </div>
 </div>
 
-<script>
-    fetch(`/cart/sum`)
-            .then(data => data.json())
-            .then(data => {
-                const navCart = document.getElementById('cart_summarise_prise')
-                if (navCart) {
-                    navCart.textContent = data
-                }
-            })
-</script>
+<!--<script>-->
+<!--    fetch(`/cart/sum`)-->
+<!--            .then(data => data.json())-->
+<!--            .then(data => {-->
+<!--                const navCart = document.getElementById('cart_summarise_prise')-->
+<!--                if (navCart) {-->
+<!--                    navCart.textContent = data-->
+<!--                }-->
+<!--            })-->
+<!--</script>-->
