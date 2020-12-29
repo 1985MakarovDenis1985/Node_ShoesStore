@@ -31,10 +31,10 @@ function countPercent(price, newPrice) {
 function createCard(product) {
     let shoeBox = createNewElement("div", "box_shoes", null, null, null);
     shoeBox.style.backgroundImage = "url(/img/" + product.imgUrl + ")";
-    let coast = createNewElement("p", "main_coast_shoe prod-currency", +product.price, null);
+    let coast = createNewElement("p", "main_coast_shoe prod-currency-bd", +product.price, null);
 
     let boxSale = createNewElement("div", "boxSale", "-" + countPercent(product.startPrice, product.price) + "%", null);
-    let coastDown = createNewElement("p", "down_coast_shoe prod-currency", +product.startPrice, null);
+    let coastDown = createNewElement("p", "down_coast_shoe prod-currency-bd", +product.startPrice, null);
 
     let sex = createNewElement("p", "sex_box_shoe", product.sex, null);
     let title = createNewElement("h5", "name_box_shoe", product.title);
@@ -102,9 +102,10 @@ async function getProducts(sex) {
                 render(data)
                 renderPag(data)
             }
-
         })
-
+    document.querySelectorAll('.prod-currency-bd').forEach(el => {
+        el.textContent = toCurrency(el.textContent)
+    })
 }
 
 const btn = document.getElementById("range_content_box")
@@ -123,6 +124,7 @@ if (btn) {
     document.getElementById('getChildren').addEventListener('click', () => {
         getProducts('children')
     })
+
 }
 
 const $card = document.querySelector('#card')
@@ -134,7 +136,7 @@ if ($card) {
 
             fetch('/cart/remove/' + id, {
                 method: 'delete',
-                headers:{
+                headers: {
                     "X-XSRF-TOKEN": csrf
                 }
             }).then((res) => res.json())
@@ -164,22 +166,27 @@ const toDate = date => {
     }).format(new Date(date))
 }
 
-
-fetch(`/cart/sum`)
-    .then(data => data.json())
-    .then(data => {
-        const navCart = document.getElementById('cart_summarise_prise')
-        if (navCart) {
-            navCart.textContent = data
-        }
-        document.querySelectorAll('.prod-currency').forEach(el => {
-            el.textContent = toCurrency(el.textContent)
-        })
+function setCurrencyForCartAndOther(){
+    document.querySelectorAll('.prod-currency').forEach(el => {
+        el.textContent = toCurrency(el.textContent)
     })
+    fetch(`/cart/sum`)
+        .then(data => data.json())
+        .then(data => {
+            const navCart = document.getElementById('cart_summarise_prise')
+            if (navCart) {
+                navCart.textContent = toCurrency(data)
+            }
+        })
+}
+setCurrencyForCartAndOther()
+
 
 document.querySelectorAll('.date').forEach(el => {
     el.textContent = toDate(el.textContent)
 })
+
+
 
 
 

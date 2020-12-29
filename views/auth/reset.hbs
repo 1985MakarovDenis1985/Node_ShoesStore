@@ -1,0 +1,20 @@
+<div class="login_container">
+
+    <div id="login" class="auth_box login-box" style="opacity: 1">
+
+        {{#if error}}
+            <p class="login-error">{{error}}</p>
+        {{/if}}
+
+        <form action="/auth/reset" method="post">
+            <div class="input-field ">
+                <input name="email" id="email" type="text" class="validate registration_forms" required>
+                <label for="email" class="registration_label">Enter your email please</label>
+                <span class="helper-text" data-error="wrong"></span>
+            </div>
+
+            <input type="hidden" name="_csrf" value="{{csrf}}">
+            <button class="btn-primary btn-registration" type="submit">Reset password</button>
+        </form>
+    </div>
+</div>
