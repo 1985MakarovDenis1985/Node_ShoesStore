@@ -1,14 +1,18 @@
 <div class="login_container">
     <input type="radio" id="loginPage" name="login-page" checked>
     <input type="radio" id="registrationPage" name="login-page">
-    <label class="label label-login" for="loginPage">Log in</label>
-    <label class="label label-registration" for="registrationPage">Registration</label>
+
+<!--    <label class="label label-login" for="loginPage">Log in</label>-->
+<!--    <label class="label label-registration" for="registrationPage">Registration</label>-->
+
+    <ul class="tabs">
+        <li class="tab col s6 label"><a href="#login" class="active">Login</a></li>
+        <li class="tab col s6 label"><a href="#registration">Registration</a></li>
+    </ul>
+
 
     <div id="login" class="auth_box login-box">
 
-        {{#if registrationError}}
-            <p class="login-error">{{registrationError}}</p>
-        {{/if}}
         {{#if loginError}}
             <p class="login-error">{{loginError}}</p>
         {{/if}}
@@ -20,13 +24,13 @@
             <div class="input-field ">
                 <input name="email" id="email" type="email" class="validate registration_forms" required>
                 <label for="email" class="registration_label">Email</label>
-                <span class="helper-text" data-error="wrong"></span>
+                <span class="helper-text" data-error="invalid email"></span>
             </div>
 
             <div class="input-field ">
                 <input name="password" id="password" type="password" class="validate registration_forms" required>
                 <label for="password" class="registration_label">Password</label>
-                <span class="helper-text" data-error="write cost"></span>
+                <span class="helper-text" data-error="invalid password"></span>
             </div>
 
             <input type="hidden" name="_csrf" value="{{csrf}}">
@@ -41,40 +45,40 @@
         {{#if registrationError}}
             <p class="login-error">{{registrationError}}</p>
         {{/if}}
-        {{#if loginError}}
-            <p class="login-error">{{loginError}}</p>
-        {{/if}}
-        {{#if passwordError}}
-            <p class="login-error">{{passwordError}}</p>
-        {{/if}}
+<!--        {{#if loginError}}-->
+<!--            <p class="login-error">{{loginError}}</p>-->
+<!--        {{/if}}-->
+<!--        {{#if passwordError}}-->
+<!--            <p class="login-error">{{passwordError}}</p>-->
+<!--        {{/if}}-->
 
-        <form action="/auth/registration" method="post">
+        <form action="/auth/registration" method="post" novalidate>
             <div class="input-field ">
                 <input name="name" id="name" type="text" class="validate registration_forms" required>
                 <label for="name" class="registration_label">Name</label>
-                <span class="helper-text" data-error="wrong"></span>
+                <span class="helper-text" data-error="invalid name"></span>
             </div>
 
             <div class="input-field ">
                 <input name="email" id="email" type="email" class="validate registration_forms" required>
                 <label for="email" class="registration_label">Email</label>
-                <span class="helper-text" data-error="wrong"></span>
+                <span class="helper-text" data-error="invalid email"></span>
             </div>
 
             <div class="input-field ">
                 <input name="password" id="rpassword" type="password" class="validate registration_forms" required>
                 <label for="rpassword" class="registration_label">Password</label>
-                <span class="helper-text" data-error="write cost"></span>
+                <span class="helper-text" data-error="invalid password"></span>
             </div>
 
             <div class="input-field ">
                 <input name="confirm" id="confirm" type="password" class="validate registration_forms" required>
                 <label for="confirm" class="registration_label">Repeat password</label>
-                <span class="helper-text" data-error="write cost"></span>
+                <span class="helper-text" data-error="incorrect repeat"></span>
             </div>
 
             <input type="hidden" name="_csrf" value="{{csrf}}">
-            <button class="btn-primary btn-registration" type="submit">Log in</button>
+            <button class="btn-primary btn-registration" type="submit">Registration</button>
         </form>
     </div>
 </div>

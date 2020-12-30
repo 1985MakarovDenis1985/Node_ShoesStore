@@ -23,11 +23,12 @@ router.post('/', auth, async (req, res) => {
             title: req.body.title,
             price: req.body.price,
             imgUrl: req.body.imgUrl,
-            startPrice: req.body.startPrice,
+            startPrice: (req.body.startPrice) ? req.body.startPrice : 0,
             boxSale: req.body.boxSale,
             sex: req.body.sex,
             desc: req.body.desc,
             size: arrOfSize,
+            userId: req.user._id
         })
         await product.save()
         res.redirect('/products')

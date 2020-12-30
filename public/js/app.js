@@ -84,6 +84,9 @@ function renderPag(products) {
             pagItem.map(el => el.classList.remove('active_pag'))
             current = +e.target.dataset.number
             render(products)
+            document.querySelectorAll('.prod-currency-bd').forEach(el => {
+                el.textContent = toCurrency(el.textContent)
+            })
             pagItem[current].classList.add('active_pag')
         })
     })
@@ -98,6 +101,7 @@ async function getProducts(sex) {
                 const a = data.filter(el => el.sex === sex)
                 render(a)
                 renderPag(a)
+                console.log("as")
             } else {
                 render(data)
                 renderPag(data)
@@ -142,9 +146,7 @@ if ($card) {
             }).then((res) => res.json())
                 .then(card => {
                     window.location.href = "/cart"
-                    console.log(card)
                 })
-            console.log(id)
         }
     })
 }
@@ -181,10 +183,12 @@ function setCurrencyForCartAndOther(){
 }
 setCurrencyForCartAndOther()
 
-
 document.querySelectorAll('.date').forEach(el => {
     el.textContent = toDate(el.textContent)
 })
+
+M.Tabs.init(document.querySelectorAll(".tabs"))
+
 
 
 

@@ -8,44 +8,65 @@
     </div>
 
     <div class="product_box_desc">
-        <h1 class="product_title">TITLE: <span>{{product.title}}</span></h1>
-        <h1 class="product_title">GANDER: <span>{{product.sex}}</span></h1>
-        <h1 class="product_title">SIZE: <span>{{product.size}}</span></h1>
-        <h1 class="product_title">DESCRIPTION:
-            <p style="margin-top: 1%" class="product_title">
-                <span>{{product.desc}}</span>
-            </p>
-        </h1>
-        <div class="new_price prod-currency" id="new_price">{{product.price}}</div>
+        <div class="product_main_desc">
+            <h1 class="product_title">TITLE: <span>{{product.title}}</span></h1>
+            <h1 class="product_title">GANDER: <span>{{product.sex}}</span></h1>
+            <h1 class="product_title">SIZE: <span>{{product.size}}</span></h1>
+            <h1 class="product_title">DESCRIPTION:
+                <p style="margin-top: 1%" class="product_title">
+                    <span>{{product.desc}}</span>
+                </p>
+            </h1>
+            <div class="new_price prod-currency" id="new_price">{{product.price}}</div>
+        </div>
+
         {{#if product.startPrice}}
+            {{product.boxSale}}
             <div class="price_before prod-currency" id="price_before">{{product.startPrice}}</div>
-            <div class="boxSale" id="product_percent">{{product.boxSale}}</div>
+            <div class="boxSale" id="product_percent"></div>
         {{/if}}
 
         {{#if isAuth}}
-            <form action="/cart/add" method="post">
+
+            <form class="form-buy_product" action="/cart/add" method="post">
                 <input type="hidden" name="id" value="{{product._id}}">
                 <input type="hidden" name="_csrf" value="{{csrf}}">
                 <button type="submit" class="btn-buy btn btn-primary">Byu</button>
             </form>
             <div class="clearfix"></div>
 
-            <div class="btn-buy btn_edit" id="btn_edit">
-                <div class="link_cover" id="link_cover"></div>
-                <a class="link_edit " href="/products/{{product._id}}/edit?allow=true">Edit</a>
-            </div>
-            <div class="clearfix"></div>
+            {{#ifeq product.userId userId}}
+                <div class="btn-buy btn_edit" id="btn_edit">
+                    <div class="link_cover" id="link_cover"></div>
+                    <a class="link_edit " href="/products/{{product._id}}/edit?allow=true">Edit</a>
+                </div>
+                <div class="clearfix"></div>
 
-            <div class="btn-buy btn-remove_box" id="btn_edit">
-                <form action="/products/remove" method="post">
-                    <input type="hidden" name="id" value={{product._id}}>
+                <div class="btn-buy btn-remove_box" >
+                    <form action="/products/remove" method="post">
+                        <input type="hidden" name="id" value={{product._id}}>
 
-                    <input type="hidden" name="_csrf" value="{{csrf}}">
+                        <input type="hidden" name="_csrf" value="{{csrf}}">
+                        <button class="btn-buy btn-remove" id="btn-remove">Remove</button>
+                    </form>
+                </div>
+
+            {{else}}
+                <p id="btnProductsErrAuth" class="btn_err_auth">You can do it only if you OWNER</p>
+                <div style="background:gray" class="btn-product btn-buy btn_edit" id="btn_edit">
+                    <div class="link_cover" id="link_cover"></div>
+                    <a class="link_edit " href="#">Edit</a>
+                </div>
+                <div class="clearfix"></div>
+
+                <div style="background:gray" class="btn-product btn-buy btn-remove_box" id="btn_edit">
                     <button class="btn-buy btn-remove" id="btn-remove">Remove</button>
-                </form>
-            </div>
+                </div>
+
+            {{/ifeq}}
 
         {{else}}
+
             <p id="btnProductsErrAuth" class="btn_err_auth">You can do it only after registration</p>
             <button style="background:gray" class="btn-product btn-buy btn btn-primary">Byu</button>
             <div class="clearfix"></div>
@@ -239,16 +260,15 @@
 
 <script>
 
-    const percentBox = document.getElementById("product_percent")
     const priceBefore = document.getElementById("price_before")
+    const percentBox = document.getElementById("product_percent")
     const percentSale = countPercent({{product.startPrice}}, {{product.price}})
-
-    if (percentSale !== Infinity) {
+    if ({{product.startPrice}}) {
         percentBox.innerText = `- ${percentSale}%`
     }
 
-    function countPercent(priceBefore, newPrice) {
-        let count = Math.ceil(newPrice * 100 / priceBefore);
+    function countPercent(price, newPrice) {
+        let count = Math.ceil(100 - newPrice * 100 / price);
         return +count
     }
 

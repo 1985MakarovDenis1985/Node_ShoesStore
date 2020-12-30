@@ -131,6 +131,11 @@
     }
 }
 
+.navigation{
+    background-color: transparent;
+    box-shadow: none;
+}
+
 .header_nav_bar {
     float: left;
     overflow: hidden;
@@ -232,6 +237,10 @@
 .nav_item a {
     text-decoration: none;
     color: #fff
+}
+
+nav ul a:hover{
+    background-color: transparent;
 }
 
 @-webkit-keyframes nav {

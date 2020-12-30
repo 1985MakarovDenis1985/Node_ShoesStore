@@ -17,6 +17,7 @@ const product = new Schema({
     },
     boxSale: {
         type: Number,
+        default: null
     },
     sex: {
         type: String,
@@ -36,12 +37,12 @@ const product = new Schema({
     }
 })
 
-// product.method('toClient', function (){
-//     const product = this.toObject()
-//     product.id = product._id
-//     delete product._id
-//     return product
-// })
+product.method('toClient', function (){
+    const product = this.toObject()
+    product.id = product._id
+    delete product._id
+    return product
+})
 
 
 // экспортируем модель: 1параметр - название модели, 2параметр - сама модель

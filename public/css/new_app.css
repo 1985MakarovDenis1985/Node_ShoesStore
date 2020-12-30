@@ -145,6 +145,7 @@ input[type=file] {
     position: relative;
 }
 
+
 .product_box_desc > .boxSale {
     width: 15%;
     height: 30px;
@@ -180,6 +181,8 @@ input[type=file] {
     text-transform: uppercase;
     color: grey;
     margin-bottom: 1%;
+    /*max-width: 50% !important;*/
+
 }
 
 .product_title > span {
@@ -187,6 +190,7 @@ input[type=file] {
     font-family: TruenoLt;
     font-size: 16px;
     line-height: 21px;
+    position: relative;
 }
 
 .arrow_right_product, .arrow_left_product {
@@ -209,6 +213,7 @@ input[type=file] {
     font-size: 25px;
     float: right;
     cursor: pointer;
+    margin-top: 8%;
 }
 
 .clearfix {
@@ -245,6 +250,9 @@ input[type=file] {
     justify-content: center;
     align-items: center;
     background: red;
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    margin-bottom: 0!important;
 }
 
 .btn-remove {
@@ -253,6 +261,9 @@ input[type=file] {
     position: relative;
     border: none;
     background: transparent;
+    line-height: 1px;
+    align-items: center;
+    margin: 0;
 }
 
 .btn_err_auth{
@@ -424,38 +435,24 @@ input[type=file] {
     font-size: 21pt;
     margin: auto;
     color: #bdb9b5;
-    width: 50%;
+    width: 20%;
     height: 10%;
+}
+
+.label > a {
+    color: #3a1c10 !important;
 }
 
 .login-box, .registration-box{
     transition: .5s;
-    z-index: 1;
-    opacity: 0;
+    /*z-index: 1;*/
+    font-family: TruenoBd
 }
 
 #loginPage, #registrationPage{
     display: none;
 }
-#loginPage:checked ~ .label-login {
-    font-family: TruenoBd;
-    color: #623232;
-}
 
-#loginPage:checked ~ .login-box {
-    opacity: 1;
-    z-index: 100;
-}
-
-#registrationPage:checked ~ .label-registration {
-    font-family: TruenoBd;
-    color: #623232;
-}
-
-#registrationPage:checked ~ .registration-box {
-    opacity: 1;
-    z-index: 100;
-}
 
 .registration_forms{
     margin-top: 40px;
@@ -478,8 +475,8 @@ input[type=file] {
     left: 20px;
     top: -20px;
     color: #623232;
-    position: absolute;
-    z-index: 100;
+    /*position: absolute;*/
+    /*z-index: 100;*/
 }
 .input-field{
     box-sizing: border-box;

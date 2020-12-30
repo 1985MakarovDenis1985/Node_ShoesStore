@@ -3,8 +3,10 @@ const router = Router()
 const bcrypt = require('bcryptjs')
 const User = require('../models/users')
 const keys = require('../keys')
-const crypto = require('crypto') // для генерации рандомных ключей
+const crypto = require('crypto')
 const nodemailer = require('nodemailer')
+const {validationResult} = require('express-validator')
+const {registrationValidator} = require('../utils/validators')
 const sendgrid = require('nodemailer-sendgrid-transport')
 const regEmail = require('../emails/regemail')
 const resetPass = require('../emails/resetPass')
@@ -64,16 +66,17 @@ router.post('/login', async (req, res) => {
 
 })
 
-router.post('/registration', async (req, res) => {
+router.post('/registration', registrationValidator,  async (req, res) => {
     try {
-        const {name, email, password, repeat} = req.body
-        const candidate = await User.findOne({email})
-        const hashPassword = await bcrypt.hash(password, 11)
+        const {name, email, password} = req.body
 
-        if (candidate) {
-            req.flash('registrationError', 'User has already exist')
-            res.redirect('/auth/login')
-        } else {
+        const errors = validationResult(req)
+        if (!errors.isEmpty()){
+            req.flash('registrationError', errors.array()[0].msg)
+            return res.status(422).redirect('/auth/login#registration' )
+        }
+
+            const hashPassword = await bcrypt.hash(password, 11)
             const user = new User({
                 name,
                 email,
@@ -83,7 +86,6 @@ router.post('/registration', async (req, res) => {
             await user.save()
             res.redirect('/auth/login')
             await transporter.sendMail(regEmail(email, name))
-        }
 
     } catch (err) {
         console.log(err)
