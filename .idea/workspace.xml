@@ -2,24 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d5d5f8e-18f9-4c22-b5ef-10f5f0bfae86" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/utils/hbs-helper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/new_app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/new_app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/6_shoe_fift.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/6_shoe_fifth.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/add.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/validators.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/validators.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/add.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/add.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/auth/loginPage.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/loginPage.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/cart.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/cart.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/footer.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/footer.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/header.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/header.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/navbar.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/navbar.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/product-edit.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/product-edit.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/product.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/product.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +38,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1lNyEeLvBcKdSHrmgN23hQg34NS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -53,7 +60,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -81,7 +88,11 @@
       <workItem from="1607982233081" duration="30703000" />
       <workItem from="1608482765093" duration="13754000" />
       <workItem from="1608626855820" duration="4664000" />
-      <workItem from="1608735279934" duration="86760000" />
+      <workItem from="1608735279934" duration="111495000" />
+      <workItem from="1609677292497" duration="3259000" />
+      <workItem from="1609842822982" duration="2606000" />
+      <workItem from="1610791479541" duration="4379000" />
+      <workItem from="1614330387012" duration="8817000" />
     </task>
     <servers />
   </component>

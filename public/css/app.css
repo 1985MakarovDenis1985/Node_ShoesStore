@@ -1341,7 +1341,7 @@ nav ul a:hover{
 
 .main_description_bottom_right_shoes {
     margin-left: 0;
-    background-image: url(../img/6_shoe_fift.jpg);
+    background-image: url(../img/6_shoe_fifth.jpg);
     background-repeat: no-repeat;
     background-size: contain
 }
@@ -1757,7 +1757,7 @@ label {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background: #fff;
-    padding-left: 10px;
+    /*padding-left: 10px;*/
     width: 100%;
     height: 500px;
     position: absolute;
@@ -4289,204 +4289,11 @@ i:hover {
     }
 }
 
-.PouPap {
-    display: block;
-    position: fixed;
-    z-index: 9999999;
-    padding: 10%;
-    background: hsla(0, 0%, 100%, .7);
-    display: none;
-    z-index: 10000000000000 !important
+
+.slick-arrow:hover{
+    background-color: transparent !important;
 }
 
-.PouPap, .PouPap .content_PouPap {
-    width: 100%;
-    height: 100%;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box
-}
-
-.PouPap .content_PouPap {
-    position: relative;
-    background: #fff;
-    border: 2px solid #623232;
-    border-radius: 5px;
-    -webkit-box-shadow: -1px 0 #3d1f13, -1px 1px #542c1c, -2px 1px #3c1e12, -2px 2px #532b1b, -3px 2px #3b1d11, -3px 3px #522a1a, -4px 3px #3a1c10, -4px 4px #512919, -5px 4px #391b0f, -5px 5px #502818, -6px 5px #381a0e, -6px 6px #4f2717, -7px 6px #37190d, -7px 7px #4e2616;
-    box-shadow: -1px 0 #3d1f13, -1px 1px #542c1c, -2px 1px #3c1e12, -2px 2px #532b1b, -3px 2px #3b1d11, -3px 3px #522a1a, -4px 3px #3a1c10, -4px 4px #512919, -5px 4px #391b0f, -5px 5px #502818, -6px 5px #381a0e, -6px 6px #4f2717, -7px 6px #37190d, -7px 7px #4e2616;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row
-}
-
-.PouPap .content_PouPap .content_PouPap_box_left {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    border: 1px solid grey;
-    height: 100%;
-    width: 30%;
-    padding: 30px;
-    font-family: myriadpro-regular;
-    color: grey !important;
-    text-align: justify;
-    line-height: 18px;
-    overflow: auto;
-    font-size: 15px
-}
-
-.PouPap .content_PouPap .content_PouPap_box_left .spanFirst {
-    font-family: Audiowide;
-    color: #623232;
-    margin-right: 5px
-}
-
-.PouPap .content_PouPap .content_PouPap_box_left .desPouPup {
-    margin-top: 10px
-}
-
-.PouPap .content_PouPap .content_PouPap_box_left .buton_buy {
-    display: block;
-    position: absolute;
-    border-radius: 5px;
-    color: #623232;
-    font-size: 15px;
-    font-family: Audiowide;
-    bottom: 50px;
-    width: 100px;
-    height: 40px;
-    cursor: pointer;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
-    padding: 5px;
-    z-index: 100;
-    background: #fff;
-    border: 1px solid #623232;
-    -webkit-box-shadow: -1px 0 #3d1f13, -1px 1px #542c1c, -2px 1px #3c1e12, -2px 2px #532b1b, -3px 2px #3b1d11, -3px 3px #522a1a, -4px 3px #3a1c10, -4px 4px #512919, -5px 4px #391b0f, -5px 5px #502818, -6px 5px #381a0e, -6px 6px #4f2717, -7px 6px #37190d, -7px 7px #4e2616;
-    box-shadow: -1px 0 #3d1f13, -1px 1px #542c1c, -2px 1px #3c1e12, -2px 2px #532b1b, -3px 2px #3b1d11, -3px 3px #522a1a, -4px 3px #3a1c10, -4px 4px #512919, -5px 4px #391b0f, -5px 5px #502818, -6px 5px #381a0e, -6px 6px #4f2717, -7px 6px #37190d, -7px 7px #4e2616;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box
-}
-
-.PouPap .content_PouPap .content_PouPap_box_left .buton_buy:hover {
-    background: #f4e4cb
-}
-
-.PouPap .content_PouPap .content_PouPap_box_right {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    border: 1px solid #000;
-    height: 100%;
-    width: 70%;
-    padding: 10px;
-    background-image: url(../img/7_shoe_item_1.png);
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    position: relative;
-    z-index: 1
-}
-
-.PouPap .content_PouPap .content_PouPap_box_right .first_price_shoe_pou_pup, .PouPap .content_PouPap .content_PouPap_box_right .main_price_shoe_pou_pup, .PouPap .content_PouPap .content_PouPap_box_right .sale_price_shoe_pou_pup {
-    font-family: TruenoLt;
-    position: relative;
-    left: 20px
-}
-
-.PouPap .content_PouPap .content_PouPap_box_right .main_price_shoe_pou_pup {
-    font-size: 28px;
-    color: #ff7270;
-    position: relative;
-    top: 30px
-}
-
-.PouPap .content_PouPap .content_PouPap_box_right .first_price_shoe_pou_pup {
-    color: grey;
-    font-size: 15px;
-    text-decoration: line-through;
-    top: 35px
-}
-
-.PouPap .content_PouPap .content_PouPap_box_right .sale_price_shoe_pou_pup {
-    top: 40px;
-    left: 20px;
-    width: 100px;
-    height: 50px;
-    background: #ff7270;
-    color: #fff;
-    text-align: center;
-    line-height: 45px;
-    font-size: 29px
-}
-
-.PouPap .content_PouPap .content_PouPap_box_right .exit_button {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    width: 40px;
-    height: 40px;
-    background: #fff;
-    border: 2px solid #623232;
-    border-radius: 5px;
-    -webkit-box-shadow: -1px 0 #3d1f13, -1px 1px #542c1c, -2px 1px #3c1e12, -2px 2px #532b1b, -3px 2px #3b1d11, -3px 3px #522a1a, -4px 3px #3a1c10, -4px 4px #512919, -5px 4px #391b0f, -5px 5px #502818, -6px 5px #381a0e, -6px 6px #4f2717, -7px 6px #37190d, -7px 7px #4e2616;
-    box-shadow: -1px 0 #3d1f13, -1px 1px #542c1c, -2px 1px #3c1e12, -2px 2px #532b1b, -3px 2px #3b1d11, -3px 3px #522a1a, -4px 3px #3a1c10, -4px 4px #512919, -5px 4px #391b0f, -5px 5px #502818, -6px 5px #381a0e, -6px 6px #4f2717, -7px 6px #37190d, -7px 7px #4e2616;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 5px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
-    cursor: pointer;
-    z-index: 100
-}
-
-.PouPap .content_PouPap .content_PouPap_box_right .exit_button:hover {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    background: #fff;
-    border: 1px solid #623232;
-    -webkit-box-shadow: -1px 0 #3d1f13, -1px 1px #542c1c, -2px 1px #3c1e12, -2px 2px #532b1b, -3px 2px #3b1d11, -3px 3px #522a1a, -4px 3px #3a1c10, -4px 4px #512919, -5px 4px #391b0f, -5px 5px #502818, -6px 5px #381a0e, -6px 6px #4f2717, -7px 6px #37190d, -7px 7px #4e2616, -8px 7px #36180c, -8px 8px #4d2515, -9px 8px #35170b, -9px 9px #4c2414, -10px 9px #34160a, -10px 10px #4b2313, -11px 10px #331509, -11px 11px #4a2212, -12px 11px #321408, -12px 12px #492111, -13px 12px #311307, -13px 13px #482010, -14px 13px #301206, -14px 14px #471f0f, -15px 14px #2f1105, -15px 15px #461e0e;
-    box-shadow: -1px 0 #3d1f13, -1px 1px #542c1c, -2px 1px #3c1e12, -2px 2px #532b1b, -3px 2px #3b1d11, -3px 3px #522a1a, -4px 3px #3a1c10, -4px 4px #512919, -5px 4px #391b0f, -5px 5px #502818, -6px 5px #381a0e, -6px 6px #4f2717, -7px 6px #37190d, -7px 7px #4e2616, -8px 7px #36180c, -8px 8px #4d2515, -9px 8px #35170b, -9px 9px #4c2414, -10px 9px #34160a, -10px 10px #4b2313, -11px 10px #331509, -11px 11px #4a2212, -12px 11px #321408, -12px 12px #492111, -13px 12px #311307, -13px 13px #482010, -14px 13px #301206, -14px 14px #471f0f, -15px 14px #2f1105, -15px 15px #461e0e;
-    top: 12px;
-    right: 12px
-}
-
-.PouPap .content_PouPap .content_PouPap_box_right .exit_button:hover > .lineOne {
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    position: absolute;
-    margin-top: -1px
-}
-
-.PouPap .content_PouPap .content_PouPap_box_right .exit_button:hover > .lineSecond {
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    position: absolute;
-    margin-top: -1px
-}
-
-.PouPap .content_PouPap .content_PouPap_box_right .exit_button .lineOne, .PouPap .content_PouPap .content_PouPap_box_right .exit_button .lineSecond {
-    margin-top: 5%;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
-    position: relative;
-    width: 5px;
-    height: 80%;
-    background: #623232
-}
 
 .cart_wrap_box {
     width: 130px;

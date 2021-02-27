@@ -22,7 +22,7 @@ router.get('/login', async (req, res) => {
         isLogin: true,
         registrationError: req.flash('registrationError'),
         loginError: req.flash('loginError'),
-        passwordError: req.flash('passwordError')
+        passwordError: req.flash('passwordError'),
     })
 })
 
@@ -69,8 +69,8 @@ router.post('/login', async (req, res) => {
 router.post('/registration', registrationValidator,  async (req, res) => {
     try {
         const {name, email, password} = req.body
-
         const errors = validationResult(req)
+
         if (!errors.isEmpty()){
             req.flash('registrationError', errors.array()[0].msg)
             return res.status(422).redirect('/auth/login#registration' )

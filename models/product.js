@@ -5,36 +5,14 @@ const product = new Schema({
         type: String,
         // required: true // говорит о том, что поле обязательно для модели
     },
-    price: {
-        type: Number,
-        // required: true
-    },
-    imgUrl: {
-        type: String,
-    },
-    startPrice: {
-        type: Number,
-    },
-    boxSale: {
-        type: Number,
-        default: null
-    },
-    sex: {
-        type: String,
-        // required: true
-    },
-    desc: {
-        type: String,
-        // required: true
-    },
-    size: {
-        type: Array,
-        // required: true
-    },
-    userId: {
-        type: Schema.Types.ObjectId,
-        ref: 'User'
-    }
+    price: {type: Number},
+    imgUrl: {type: String},
+    startPrice: {type: Number},
+    boxSale: {type: Number, default: null},
+    sex: {type: String,},
+    desc: {type: String},
+    size: {type: Array},
+    userId: {type: Schema.Types.ObjectId, ref: 'User'}
 })
 
 product.method('toClient', function (){

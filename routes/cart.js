@@ -59,7 +59,7 @@ router.get('/sum', async (req, res) => {
         const sum = computePrice(products)
         res.status(200).json(sum)
     } else {
-        return
+        return res.status(200).json(0)
     }
 
 })

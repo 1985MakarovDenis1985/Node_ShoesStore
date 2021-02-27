@@ -11,7 +11,12 @@
         <div class="product_main_desc">
             <h1 class="product_title">TITLE: <span>{{product.title}}</span></h1>
             <h1 class="product_title">GANDER: <span>{{product.sex}}</span></h1>
-            <h1 class="product_title">SIZE: <span>{{product.size}}</span></h1>
+            <h1 class="product_title">SIZE:
+                {{#each product.size}}
+                    <span>{{this}}</span>
+                {{/each}}
+            </h1>
+
             <h1 class="product_title">DESCRIPTION:
                 <p style="margin-top: 1%" class="product_title">
                     <span>{{product.desc}}</span>
@@ -52,7 +57,7 @@
                 </div>
 
             {{else}}
-                <p id="btnProductsErrAuth" class="btn_err_auth">You can do it only if you OWNER</p>
+                <p id="btnProductsErrAuth" class="btn_err_auth">You can do it only if you are OWNER</p>
                 <div style="background:gray" class="btn-product btn-buy btn_edit" id="btn_edit">
                     <div class="link_cover" id="link_cover"></div>
                     <a class="link_edit " href="#">Edit</a>

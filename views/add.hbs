@@ -31,23 +31,64 @@
 
     <div class="add_container">
         <div class="add_form_container" id="">
-            <form method="post" action="/add" class="form_block">
+
+            <form method="post" action="/add" class="form_block" >
 
                 <div class="left_add_block_add">
-                    <img class="temp_img" id="temp_img" src="/img/9_shoe_item_3.png" alt=""/>
-                    <input type="file" id="imgUrl" placeholder="imgUrl" name="imgUrl"/>
+                    <img class="show_img" id="img" name="img" src="/img/6_shoe_fifth.jpg" alt=""/>
+                    <div class="file-field input-field input-add_img_block">
+                        <div class="btn btn-add_img btn-white">
+                            <span>Image</span>
+                            <input type="file" id="imgUrl" name="imgUrl" value="/img/6_shoe_fifth.jpg"/>
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate"  type="text"/>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="right_add_block_add">
-                    <input type="text" placeholder="title" name="title"/>
-                    <input type="number" placeholder="price" name="price"/>
-                    <input type="text" placeholder="first price" name="startPrice" value="0"/>
-                    <input type="text" placeholder="sex" name="sex"/>
-                    <input type="string" placeholder="size" name="size"/>
-                    <textarea class="desc" id="" cols="30" rows="10" placeholder="desc" name="desc"></textarea>
+                    <input type="text" placeholder="Title" name="title" id="title" value="{{data.title}}"/>
+                    <input type="number" placeholder="Price" name="price" id="price" value="{{data.price}}"/>
+                    <input type="number" placeholder="Old price" name="startPrice" value="{{data.startPrice}}"
+                           id="startPrice"/>
+
+                    <textarea id="desc" class="desc materialize-textarea" name="desc" placeholder="Description">{{data.desc}}</textarea>
+
+                    <div class="input-field col s12 select_gender">
+                        <select name="sex" id="sex" >
+                            <option value="" disabled selected>Choose gender:</option>
+                            <option value="man">man</option>
+                            <option value="woman">woman</option>
+                            <option value="children">children</option>
+                        </select>
+                    </div>
+
+                    <div class="input-field col s12 select_size">
+                        <select multiple name="size" id="size">
+                            <option value="" disabled selected>Size:</option>
+                            <option value="31">31</option>
+                            <option value="32">32</option>
+                            <option value="33">33</option>
+                            <option value="34">34</option>
+                            <option value="35">35</option>
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                        </select>
+                    </div>
 
                     <input type="hidden" name="_csrf" value="{{csrf}}">
-                    <button type="submit" id="temp_btn_add">ADD</button>
+                    {{#if errors}}
+                        <p class="add_errors">{{errors}}</p>
+                    {{/if}}
+                    <button type="submit" id="btn_add_new_product">ADD</button>
                 </div>
             </form>
         </div>
@@ -57,11 +98,11 @@
 <!--изменить-->
 <script>
     const inpImg = document.getElementById('imgUrl')
-    const tempImg = document.getElementById('temp_img')
+    const tempImg = document.getElementById('img')
 
-    inpImg.addEventListener('change', (e)=>{
+    inpImg.addEventListener('change', (e) => {
         let filename = e.target.value.replace(/.*\\/, "")
-        tempImg.src = '/img/'+filename
+        tempImg.src = '/img/' + filename
     })
 </script>
 
