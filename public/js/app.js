@@ -101,7 +101,6 @@ async function getProducts(sex) {
                 const a = data.filter(el => el.sex === sex)
                 render(a)
                 renderPag(a)
-                console.log("as")
             } else {
                 render(data)
                 renderPag(data)
@@ -112,10 +111,40 @@ async function getProducts(sex) {
     })
 }
 
+// search fn
+function search() {
+    const inputSearch = document.getElementById("search")
+    let searchRegExp = new RegExp(inputSearch.value, ['i'])
+
+    const prod = fetch('/products/all')
+        .then(data => data.json())
+        .then(data => data.filter(el => searchRegExp.test(el.title)))
+        .then((data) => {
+            current = 0;
+            document.getElementById("pag_box").innerHTML = "";
+            render(data)
+            renderPag(data)
+        })
+}
+
+const btnSearch = document.getElementById("btn_search")
+if (btnSearch){
+    btnSearch.addEventListener("click", (e) => {
+        search()
+    })
+    document.getElementById("search").addEventListener("keypress", (e) => {
+        if (e.keyCode == 13) {
+            search();
+        }
+    });
+}
+
+
+
+// choose gander
 const btn = document.getElementById("range_content_box")
 if (btn) {
     getProducts()
-    //
     document.getElementById('getAll').addEventListener('click', () => {
         getProducts()
     })
@@ -168,7 +197,7 @@ const toDate = date => {
     }).format(new Date(date))
 }
 
-function setCurrencyForCartAndOther(){
+function setCurrencyForCartAndOther() {
     document.querySelectorAll('.prod-currency').forEach(el => {
         el.textContent = toCurrency(el.textContent)
     })
@@ -181,6 +210,7 @@ function setCurrencyForCartAndOther(){
             }
         })
 }
+
 setCurrencyForCartAndOther()
 
 document.querySelectorAll('.date').forEach(el => {
@@ -190,7 +220,7 @@ document.querySelectorAll('.date').forEach(el => {
 M.Tabs.init(document.querySelectorAll(".tabs"))
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     let elems = document.querySelectorAll('select');
     let instances = M.FormSelect.init(elems);
 });
