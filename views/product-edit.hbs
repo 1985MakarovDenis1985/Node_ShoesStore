@@ -1,86 +1,115 @@
-<h1>Change {{product.title}}</h1>
-<p>
-    <!--                <p class="over_slider_text_word">D</p>-->
-    <!--                <p class="over_slider_text_word">D</p>-->
-    <!--                <p class="over_slider_text_word"></p>-->
-    <!--                <p class="over_slider_text_word" style="margin-left: 10px">P</p>-->
-    <!--                <p class="over_slider_text_word">R</p>-->
-    <!--                <p class="over_slider_text_word" style="margin-left: 0px">O</p>-->
-    <!--                <p class="over_slider_text_word">D</p>-->
-    <!--                <p class="over_slider_text_word">U</p>-->
-    <!--                <p class="over_slider_text_word">C</p>-->
-    <!--                <p class="over_slider_text_word">T</p>-->
-    <!--            </div>-->
-    <!--            <div class="over_slider_text_shadow">-->
-    <!--                <p class=" over_slider_text_word_shadow">A</p>-->
-    <!--                <p class=" over_slider_text_word_shadow">D</p>-->
-    <!--                <p class=" over_slider_text_word_shadow">D</p>-->
-    <!--                <p class=" over_slider_text_word_shadow"></p>-->
-    <!--                <p class=" over_slider_text_word_shadow" style="margin-left: 10px">P</p>-->
-    <!--                <p class=" over_slider_text_word_shadow">R</p>-->
-    <!--                <p class=" over_slider_text_word_shadow" style="margin-left: 0px">O</p>-->
-    <!--                <p class=" over_slider_text_word_shadow">D</p>-->
-    <!--                <p class=" over_slider_text_word_shadow">U</p>-->
-    <!--                <p class=" over_slider_text_word_shadow">C</p>-->
-    <!--                <p class=" over_slider_text_word_shadow">T</p>-->
-    <!--            </div>-->
-    <!--        </div>-->
-</p>
+<div class="login_box" id="">
+
+    <h1>Change {{product.title}}</h1>
+    <p>
+        <!--                <p class="over_slider_text_word">D</p>-->
+        <!--                <p class="over_slider_text_word">D</p>-->
+        <!--                <p class="over_slider_text_word"></p>-->
+        <!--                <p class="over_slider_text_word" style="margin-left: 10px">P</p>-->
+        <!--                <p class="over_slider_text_word">R</p>-->
+        <!--                <p class="over_slider_text_word" style="margin-left: 0px">O</p>-->
+        <!--                <p class="over_slider_text_word">D</p>-->
+        <!--                <p class="over_slider_text_word">U</p>-->
+        <!--                <p class="over_slider_text_word">C</p>-->
+        <!--                <p class="over_slider_text_word">T</p>-->
+        <!--            </div>-->
+        <!--            <div class="over_slider_text_shadow">-->
+        <!--                <p class=" over_slider_text_word_shadow">A</p>-->
+        <!--                <p class=" over_slider_text_word_shadow">D</p>-->
+        <!--                <p class=" over_slider_text_word_shadow">D</p>-->
+        <!--                <p class=" over_slider_text_word_shadow"></p>-->
+        <!--                <p class=" over_slider_text_word_shadow" style="margin-left: 10px">P</p>-->
+        <!--                <p class=" over_slider_text_word_shadow">R</p>-->
+        <!--                <p class=" over_slider_text_word_shadow" style="margin-left: 0px">O</p>-->
+        <!--                <p class=" over_slider_text_word_shadow">D</p>-->
+        <!--                <p class=" over_slider_text_word_shadow">U</p>-->
+        <!--                <p class=" over_slider_text_word_shadow">C</p>-->
+        <!--                <p class=" over_slider_text_word_shadow">T</p>-->
+        <!--            </div>-->
+        <!--        </div>-->
+    </p>
 
 
-<div class="add_container ">
-    <div class="add_form_container" id="">
-        <form method="post" action="/products/edit" class="form_block">
+    <div class="add_container ">
+        <div class="add_form_container" id="">
+            <form method="post" action="/products/edit" class="form_block">
 
 
-            <div class="left_add_block_add">
-                <img class="show_img" id="temp_img" name="img" src="/img/{{product.imgUrl}}" alt=""/>
-                <input type="file" id="imgUrl" name="imgUrl" value="{{product.imgUrl}}"/>
-            </div>
-
-            <div class="right_add_block_add">
-                <input type="text" placeholder="title" name="title" value="{{product.title}}"/>
-                <input type="text" placeholder="price" name="price" value="{{product.price}}"/>
-                <input type="text" placeholder="first price" name="startPrice" value="{{product.startPrice}}"/>
-                <input type="text" placeholder="sex" name="sex" value="{{product.sex}}"/>
-
-
-                {{#each product.size}}
-                    <div class="selected_size" data-size={{this}} style="display: none">11111</div>
-                {{/each}}
-
-                <div class="input-field col s12 select_size">
-                    <select multiple name="size" id="size">
-                        <option value="" disabled selected>Size:</option>
-
-                        <option class="option_size" value="31">31</option>
-                        <option class="option_size" value="32">32</option>
-                        <option class="option_size" value="33">33</option>
-                        <option class="option_size" value="34">34</option>
-                        <option class="option_size" value="35">35</option>
-                        <option class="option_size" value="36">36</option>
-                        <option class="option_size" value="37">37</option>
-                        <option class="option_size" value="38">38</option>
-                        <option class="option_size" value="39">39</option>
-                        <option class="option_size" value="40">40</option>
-                        <option class="option_size" value="41">41</option>
-                        <option class="option_size" value="42">42</option>
-                        <option class="option_size" value="43">43</option>
-                        <option class="option_size" value="44">44</option>
-                    </select>
+                <div class="left_add_block_add">
+                    <img class="show_img" id="temp_img" name="img" src="/img/{{product.imgUrl}}" alt=""/>
+                    <div class="file-field input-field input-add_img_block">
+                        <div class="btn btn-add_img btn-white">
+                            <span>Image</span>
+                            <input class="choose_img" type="file" id="imgUrl" name="imgUrl" value="{{product.imgUrl}}"/>
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text"/>
+                        </div>
+                    </div>
                 </div>
 
-                <!--                <input type="string" placeholder="size" name="size" value="{{product.size}}"/>-->
+                <!--            <div class="left_add_block_add">-->
+                <!--                <img class="show_img" id="temp_img" name="img" src="/img/{{product.imgUrl}}" alt=""/>-->
+                <!--                <input type="file" id="imgUrl" name="imgUrl" value="{{product.imgUrl}}"/>-->
+                <!--            </div>-->
+
+                <div class="right_add_block_add">
+                    <input type="text" placeholder="title" name="title" value="{{product.title}}"/>
+                    <input type="text" placeholder="price" name="price" value="{{product.price}}"/>
+                    <input type="text" placeholder="first price" name="startPrice" value="{{product.startPrice}}"/>
+
+                    <textarea id="desc" class="desc materialize-textarea" name="desc"
+                              placeholder="Description">{{product.desc}}</textarea>
 
 
-                <textarea class="desc" id="" cols="30" rows="10" placeholder="desc"
-                          name="desc">{{product.desc}}</textarea>
-                <input type="hidden" name="id" value="{{product.id}}">
+                    <!--                <input type="text" placeholder="sex" name="sex" value="{{product.sex}}"/>-->
+                    <div class="input-field col s12 select_gender">
+                        <select name="sex" id="sex">
+                            <option value="" disabled selected>Choose gender:</option>
+                            <option value="man">man</option>
+                            <option value="woman">woman</option>
+                            <option value="children">children</option>
+                        </select>
+                    </div>
 
-                <input type="hidden" name="_csrf" value="{{csrf}}">
-                <button type="submit" id="temp_btn_add">ADD</button>
-            </div>
-        </form>
+                    {{#each product.size}}
+                        <div class="selected_size" data-size={{this}} style="display: none"></div>
+                    {{/each}}
+
+                    <div class="input-field col s12 select_size">
+                        <select multiple name="size" id="size">
+                            <option value="" disabled selected>Size:</option>
+
+                            <option class="option_size" value="31">31</option>
+                            <option class="option_size" value="32">32</option>
+                            <option class="option_size" value="33">33</option>
+                            <option class="option_size" value="34">34</option>
+                            <option class="option_size" value="35">35</option>
+                            <option class="option_size" value="36">36</option>
+                            <option class="option_size" value="37">37</option>
+                            <option class="option_size" value="38">38</option>
+                            <option class="option_size" value="39">39</option>
+                            <option class="option_size" value="40">40</option>
+                            <option class="option_size" value="41">41</option>
+                            <option class="option_size" value="42">42</option>
+                            <option class="option_size" value="43">43</option>
+                            <option class="option_size" value="44">44</option>
+                        </select>
+                    </div>
+
+                    <!--                <input type="string" placeholder="size" name="size" value="{{product.size}}"/>-->
+
+
+                    <!--                <textarea class="desc" id="" cols="30" rows="10" placeholder="desc"-->
+                    <!--                          name="desc">{{product.desc}}</textarea>-->
+                    <input type="hidden" name="id" value="{{product.id}}">
+                    <input type="hidden" name="_csrf" value="{{csrf}}">
+
+                    <button type="submit" id="btn_add_new_product">ADD</button>
+                    <!--                <button type="submit" id="temp_btn_add">ADD</button>-->
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
@@ -94,14 +123,14 @@
         tempImg.src = '/img/' + filename
     })
 
-    let x = Array.from(document.getElementsByClassName("selected_size"))
-    let y = Array.from(document.getElementsByClassName("option_size"))
+    let selectedSize = Array.from(document.getElementsByClassName("selected_size"))
+    let optionSize = Array.from(document.getElementsByClassName("option_size"))
 
-    for (let i = 0; i < x.length; i++) {
-        for (let j = 0; j < y.length; j++) {
-            if (y[j].value == x[i].dataset.size) {
-                y[j].selected = true
-                console.log(y[j])
+    for (let i = 0; i < selectedSize.length; i++) {
+        for (let j = 0; j < optionSize.length; j++) {
+            if (optionSize[j].value == selectedSize[i].dataset.size) {
+                optionSize[j].selected = true
+                console.log(optionSize[j])
             }
         }
     }

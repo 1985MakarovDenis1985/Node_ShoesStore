@@ -12,9 +12,17 @@
             <h1 class="product_title">TITLE: <span>{{product.title}}</span></h1>
             <h1 class="product_title">GANDER: <span>{{product.sex}}</span></h1>
             <h1 class="product_title">SIZE:
-                {{#each product.size}}
-                    <span>{{this}}</span>
-                {{/each}}
+
+                <div class="input-field col s12 select_size">
+                    <select multiple name="size" id="size">
+                        {{#each product.size}}
+                            <option class="option_size" value="{{this}}">{{this}}</option>
+                        {{/each}}
+<!--                                                <option class="option_size" value="31">31</option>-->
+                    </select>
+                </div>
+
+
             </h1>
 
             <h1 class="product_title">DESCRIPTION:
@@ -47,7 +55,7 @@
                 </div>
                 <div class="clearfix"></div>
 
-                <div class="btn-buy btn-remove_box" >
+                <div class="btn-buy btn-remove_box">
                     <form action="/products/remove" method="post">
                         <input type="hidden" name="id" value={{product._id}}>
 
@@ -119,134 +127,134 @@
                 <div class="footer_row_two_left_box"><i class="footer_icon fas fa-phone-volume"></i></div>
                 <p class="footer_row_two_left_text_top">CALLS</p>
                 <p class="footer_row_two_left_text_bottom"><a href="#"></a>
-                    <div class="number_box">
-                <p class="number">0</p>
-                <p class="number">6</p>
-                <p class="number">3</p>
-                <p class="number">4</p>
-                <p class="number">6</p>
-                <p class="number">1</p>
-                <p class="number">3</p>
-                <p class="number">5</p>
-                <p class="number">2</p>
-                <p class="number">2</p>
+                <div class="number_box">
+                    <p class="number">0</p>
+                    <p class="number">6</p>
+                    <p class="number">3</p>
+                    <p class="number">4</p>
+                    <p class="number">6</p>
+                    <p class="number">1</p>
+                    <p class="number">3</p>
+                    <p class="number">5</p>
+                    <p class="number">2</p>
+                    <p class="number">2</p>
+                </div>
+                </p>
             </div>
-            </p>
-        </div>
 
-        <div class="footer_row_two_left footer_row_two_left_item_2">
-            <div class="footer_row_two_left_box footer_left_box_second"><i class="far fa-envelope"></i></div>
-            <p class="footer_row_two_left_text_top">EMAIL US</p>
-            <p class="footer_row_two_left_text_bottom footer_row_two_left_text_bottom_midle">
+            <div class="footer_row_two_left footer_row_two_left_item_2">
+                <div class="footer_row_two_left_box footer_left_box_second"><i class="far fa-envelope"></i></div>
+                <p class="footer_row_two_left_text_top">EMAIL US</p>
+                <p class="footer_row_two_left_text_bottom footer_row_two_left_text_bottom_midle">
                 <div class="number_box number_midle">
-            <p class="number">m</p>
-            <p class="number">a</p>
-            <p class="number">k</p>
-            <p class="number mail_4">a</p>
-            <p class="number">r</p>
-            <p class="number">o</p>
-            <p class="number mail_7">v</p>
-            <p class="number">d</p>
-            <p class="number mail_9">e</p>
-            <p class="number">n</p>
-            <p class="number">y</p>
-            <p class="number">s</p>
-            <p class="number">1</p>
-            <p class="number">9</p>
-            <p class="number">8</p>
-            <p class="number">5</p>
-            <p class="number">@</p>
-            <p class="number">g</p>
-            <p class="number">m</p>
-            <p class="number">a</p>
-            <p class="number">i</p>
-            <p class="number">l</p>
-            <p class="number">.</p>
-            <p class="number">c</p>
-            <p class="number">o</p>
-            <p class="number">m</p>
-        </div>
-        </p>
-    </div>
+                    <p class="number">m</p>
+                    <p class="number">a</p>
+                    <p class="number">k</p>
+                    <p class="number mail_4">a</p>
+                    <p class="number">r</p>
+                    <p class="number">o</p>
+                    <p class="number mail_7">v</p>
+                    <p class="number">d</p>
+                    <p class="number mail_9">e</p>
+                    <p class="number">n</p>
+                    <p class="number">y</p>
+                    <p class="number">s</p>
+                    <p class="number">1</p>
+                    <p class="number">9</p>
+                    <p class="number">8</p>
+                    <p class="number">5</p>
+                    <p class="number">@</p>
+                    <p class="number">g</p>
+                    <p class="number">m</p>
+                    <p class="number">a</p>
+                    <p class="number">i</p>
+                    <p class="number">l</p>
+                    <p class="number">.</p>
+                    <p class="number">c</p>
+                    <p class="number">o</p>
+                    <p class="number">m</p>
+                </div>
+                </p>
+            </div>
 
-    <div class="footer_row_two_left footer_row_two_left_item_3">
-        <div class="footer_row_two_left_box footer_left_box_third"><i class="far fa-map"></i></div>
-        <p class="footer_row_two_left_text_top">ADDRESS</p>
-        <p class="footer_row_two_left_text_bottom"><a href="#"></a>
-            <div class="number_box">
-        <p class="number">4</p>
-        <p class="number">0</p>
-        <p class="number mail_3">B</p>
-        <p class="number mail_4">a</p>
-        <p class="number">r</p>
-        <p class="number">i</p>
-        <p class="number mail_7">a</p>
-        <p class="number mail_8">S</p>
-        <p class="number mail_9">t</p>
-        <p class="number">r</p>
-        <p class="number">e</p>
-        <p class="number">e</p>
-        <p class="number">t</p>
-        <p class="number mail_14">1</p>
-        <p class="number">3</p>
-        <p class="number">3</p>
-        <p class="number">/</p>
-        <p class="number">2</p>
-        <p class="number">,</p>
-        <p class="number mail_20">N</p>
-        <p class="number">Y</p>
-        <p class="number">,</p>
-        <p class="number mail_23">U</p>
-        <p class="number">S</p>
-    </div>
-    </p>
-    </div>
-    </div>
-
-
-    <div class="footer_row_two_right_col_hidden"></div>
-
-    <div class="footer_row_two_right">
-        <div class="footer_row_two_right_col">
-            <ul class="footer_row_two_right_col_ul">NAVIGATION
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Latest News</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">Brands</a></li>
-            </ul>
+            <div class="footer_row_two_left footer_row_two_left_item_3">
+                <div class="footer_row_two_left_box footer_left_box_third"><i class="far fa-map"></i></div>
+                <p class="footer_row_two_left_text_top">ADDRESS</p>
+                <p class="footer_row_two_left_text_bottom"><a href="#"></a>
+                <div class="number_box">
+                    <p class="number">4</p>
+                    <p class="number">0</p>
+                    <p class="number mail_3">B</p>
+                    <p class="number mail_4">a</p>
+                    <p class="number">r</p>
+                    <p class="number">i</p>
+                    <p class="number mail_7">a</p>
+                    <p class="number mail_8">S</p>
+                    <p class="number mail_9">t</p>
+                    <p class="number">r</p>
+                    <p class="number">e</p>
+                    <p class="number">e</p>
+                    <p class="number">t</p>
+                    <p class="number mail_14">1</p>
+                    <p class="number">3</p>
+                    <p class="number">3</p>
+                    <p class="number">/</p>
+                    <p class="number">2</p>
+                    <p class="number">,</p>
+                    <p class="number mail_20">N</p>
+                    <p class="number">Y</p>
+                    <p class="number">,</p>
+                    <p class="number mail_23">U</p>
+                    <p class="number">S</p>
+                </div>
+                </p>
+            </div>
         </div>
 
 
-        <div class="footer_row_two_right_col">
-            <ul class="footer_row_two_right_col_ul">CATEGORIES
-                <li><a href="#">Men</a></li>
-                <li><a href="#">Women</a></li>
-                <li><a href="#">Children</a></li>
-                <li><a href="#">Baby</a></li>
-                <li><a href="#">Accessories</a></li>
-            </ul>
-        </div>
+        <div class="footer_row_two_right_col_hidden"></div>
 
-        <div class="footer_row_two_right_col">
-            <ul class="footer_row_two_right_col_ul">SALES
-                <li><a href="#">New Arrivals</a></li>
-                <li><a href="#">Most Popular</a></li>
-                <li><a href="#">Tpo Picks</a></li>
-                <li><a href="#">Outlet</a></li>
-            </ul>
-        </div>
+        <div class="footer_row_two_right">
+            <div class="footer_row_two_right_col">
+                <ul class="footer_row_two_right_col_ul">NAVIGATION
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Latest News</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Brands</a></li>
+                </ul>
+            </div>
 
-        <div class="footer_row_two_right_col">
-            <ul class="footer_row_two_right_col_ul">SUPPORT
-                <li><a href="#">Shipping & Delivery</a></li>
-                <li><a href="#">Return Policy</a></li>
-                <li><a href="#">Terms & Service</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
+
+            <div class="footer_row_two_right_col">
+                <ul class="footer_row_two_right_col_ul">CATEGORIES
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Children</a></li>
+                    <li><a href="#">Baby</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_row_two_right_col">
+                <ul class="footer_row_two_right_col_ul">SALES
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Most Popular</a></li>
+                    <li><a href="#">Tpo Picks</a></li>
+                    <li><a href="#">Outlet</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_row_two_right_col">
+                <ul class="footer_row_two_right_col_ul">SUPPORT
+                    <li><a href="#">Shipping & Delivery</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Terms & Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
     </div>
 
     <div class="underfooter">

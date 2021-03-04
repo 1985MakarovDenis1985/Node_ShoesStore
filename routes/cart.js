@@ -37,6 +37,8 @@ router.get('/', auth, async (req, res) => {
         products: products,
         price: computePrice(products)
     })
+
+    // console.log(products)
 })
 
 router.delete('/remove/:id', auth, async (req, res) => {
@@ -61,7 +63,6 @@ router.get('/sum', async (req, res) => {
     } else {
         return res.status(200).json(0)
     }
-
 })
 
 // router.delete('/product/:id', auth, async (req, res) => {

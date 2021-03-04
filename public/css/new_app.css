@@ -1,23 +1,26 @@
 
 @media screen and (max-width: 1024px) {
 
-    .product_box {
+    .product_box, .add_container, .card-box {
         width: 1024px !important;
     }
 
-    .add_container {
-        width: 1024px !important;
+    .orders-container{
+        width: 960px !important;
     }
-
 }
 
 @media screen and (max-width: 769px) {
-    .add_container {
+    .add_container, .product_box, .card-box{
         width: 768px !important;
     }
 
-    .product_box {
-        width: 768px !important;
+    .btn-remove_new {
+        font-size: 10px;
+    }
+
+    .orders-container{
+        width: 700px !important;
     }
 }
 
@@ -242,6 +245,10 @@ input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:n
 
 }
 
+.choose_img{
+    height: 50px;
+}
+
 
 /*product*/
 
@@ -387,7 +394,7 @@ input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:n
     font-size: 25px;
     float: right;
     cursor: pointer;
-    margin-top: 8%;
+    /*margin-top: 8%;*/
 }
 
 .clearfix {
@@ -484,6 +491,8 @@ input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:n
     box-sizing: border-box;
     padding: 3%;
 }
+
+
 
 .btn-remove_new{
     background: transparent;
@@ -629,6 +638,12 @@ input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:n
     font-size: 50px;
     font-family: TruenoLt;
 }
+
+/*@media screen and (max-width: 769px) {*/
+/*    .orders-container{*/
+/*        width: 768px !important;*/
+/*    }*/
+/*}*/
 
 
 /* login page */

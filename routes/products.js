@@ -62,7 +62,7 @@ router.post('/edit', auth, async (req, res) => {
         if (req.body.startPrice == '') {
             req.body.startPrice = 0
         }
-        console.log(req.body)
+        // console.log(req.body)
         // await Product.findByIdAndUpdate(id, req.body)
         await product.save()
         res.redirect('/products')
@@ -91,6 +91,7 @@ router.get('/:id', async (req, res) => {
             userId: req.user ? req.user._id.toString() : null,
             product
         })
+        // console.log(product)
     }catch (err){
         console.log(err)
     }

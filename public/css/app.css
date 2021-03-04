@@ -5109,6 +5109,16 @@ i:hover {
         width: 768px
     }
 
+    .header_nav_bar{
+        width: 55%;
+    }
+    
+    nav ul a{
+        padding: 0;
+        text-align: center;
+        font-size: 12px;
+    }
+
     .logo_box {
         margin-left: 10px
     }
@@ -5334,7 +5344,7 @@ i:hover {
 
     .slider_comments_box {
         height: 130px;
-        margin-top: -150px
+        margin-top: -230px
     }
 
     .comments_box_of_people {
@@ -5343,13 +5353,13 @@ i:hover {
     }
 
     .maindots {
-        margin-top: 20px;
+        margin-top: 50px;
         z-index: 10000
     }
 
     .help_wrap {
         width: 768px;
-        margin-top: 110px
+        margin-top: 0px
     }
 
     .box_help {
@@ -5428,7 +5438,8 @@ i:hover {
 
 @media screen and (max-width: 426px) {
     .header_undernav_wrap {
-        width: 100%
+        width: 100%;
+        overflow: hidden;
     }
 
     .logo_box {

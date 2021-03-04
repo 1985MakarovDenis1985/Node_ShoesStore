@@ -1,50 +1,66 @@
 <div class="card-box" id="card">
-<!--    <div class="over_slider_text over_slider_text_login">-->
-<!--        <p class="over_slider_text_word">Y</p>-->
-<!--        <p class="over_slider_text_word">O</p>-->
-<!--        <p class="over_slider_text_word">U</p>-->
-<!--        <p class="over_slider_text_word">R</p>-->
-<!--        <p class="over_slider_text_word"></p>-->
-<!--        <p class="over_slider_text_word" style="margin-left: 10px">O</p>-->
-<!--        <p class="over_slider_text_word" style="margin-left: 0px">R</p>-->
-<!--        <p class="over_slider_text_word">D</p>-->
-<!--        <p class="over_slider_text_word">E</p>-->
-<!--        <p class="over_slider_text_word">R</p>-->
-<!--        <p class="over_slider_text_word">S</p>-->
+    <!--    <div class="over_slider_text over_slider_text_login">-->
+    <!--        <p class="over_slider_text_word">Y</p>-->
+    <!--        <p class="over_slider_text_word">O</p>-->
+    <!--        <p class="over_slider_text_word">U</p>-->
+    <!--        <p class="over_slider_text_word">R</p>-->
+    <!--        <p class="over_slider_text_word"></p>-->
+    <!--        <p class="over_slider_text_word" style="margin-left: 10px">O</p>-->
+    <!--        <p class="over_slider_text_word" style="margin-left: 0px">R</p>-->
+    <!--        <p class="over_slider_text_word">D</p>-->
+    <!--        <p class="over_slider_text_word">E</p>-->
+    <!--        <p class="over_slider_text_word">R</p>-->
+    <!--        <p class="over_slider_text_word">S</p>-->
 
-<!--    </div>-->
-<!--    <div class="over_slider_text_shadow">-->
-<!--        <p class=" over_slider_text_word_shadow">Y</p>-->
-<!--        <p class=" over_slider_text_word_shadow">O</p>-->
-<!--        <p class=" over_slider_text_word_shadow">U</p>-->
-<!--        <p class=" over_slider_text_word_shadow">R</p>-->
-<!--        <p class=" over_slider_text_word_shadow"></p>-->
-<!--        <p class=" over_slider_text_word_shadow" style="margin-left: 10px">O</p>-->
-<!--        <p class=" over_slider_text_word_shadow" style="margin-left: 0px;">R</p>-->
-<!--        <p class=" over_slider_text_word_shadow">D</p>-->
-<!--        <p class=" over_slider_text_word_shadow">E</p>-->
-<!--        <p class=" over_slider_text_word_shadow">R</p>-->
-<!--        <p class=" over_slider_text_word_shadow">S</p>-->
-<!--    </div>-->
+    <!--    </div>-->
+    <!--    <div class="over_slider_text_shadow">-->
+    <!--        <p class=" over_slider_text_word_shadow">Y</p>-->
+    <!--        <p class=" over_slider_text_word_shadow">O</p>-->
+    <!--        <p class=" over_slider_text_word_shadow">U</p>-->
+    <!--        <p class=" over_slider_text_word_shadow">R</p>-->
+    <!--        <p class=" over_slider_text_word_shadow"></p>-->
+    <!--        <p class=" over_slider_text_word_shadow" style="margin-left: 10px">O</p>-->
+    <!--        <p class=" over_slider_text_word_shadow" style="margin-left: 0px;">R</p>-->
+    <!--        <p class=" over_slider_text_word_shadow">D</p>-->
+    <!--        <p class=" over_slider_text_word_shadow">E</p>-->
+    <!--        <p class=" over_slider_text_word_shadow">R</p>-->
+    <!--        <p class=" over_slider_text_word_shadow">S</p>-->
+    <!--    </div>-->
 
     {{#if products.length}}
 
         {{#each products}}
-                <div class="block-products_item">
-                    <div style="background-image: url('/img/{{imgUrl}}')" class="products_item-img"></div>
-                    <div class="products_item-title">{{title}}</div>
-                    <div class="products_item-price prod-currency">{{price}}</div>
-                    <div class="products_item-size">{{size}}</div>
-                    <div class="products_item-count">{{count}}</div>
+            <div class="block-products_item">
+                <div style="background-image: url('/img/{{imgUrl}}')" class="products_item-img"></div>
+                <div class="products_item-title">{{title}}</div>
+                <div class="products_item-price prod-currency">{{price}}</div>
+<!--                <div class="products_item-size">{{size}}</div>-->
 
-                    <div class="btn-remove_block">
-                        <button
-                                class="btn btn-small btn-remove btn-remove_new"
-                                data-id="{{_id}}"
-                                data-csrf="{{@root.csrf}}"
-                        >Remove</button>
-                    </div>
+
+<!--                <div class="">-->
+<!--                    <select multiple name="size" id="size">-->
+<!--                        <option value="" disabled selected>Size:</option>-->
+<!--                        {{#each size}}-->
+<!--                            <option class="option_size" value={{this}}>{{this}}</option>-->
+<!--                        {{/each}}-->
+<!--                    </select>-->
+<!--                </div>-->
+
+
+                <div class="products_item-count">{{count}} items</div>
+                <div class="btn-remove_block">
+                    <button
+                            class="btn btn-small btn-remove btn-remove_new"
+                            data-id="{{_id}}"
+                            data-csrf="{{@root.csrf}}"
+                    >Remove
+                    </button>
                 </div>
+            </div>
+<!--{{#each size}}-->
+<!--    <h1>{{this}}</h1>-->
+<!--{{/each}}-->
+
         {{/each}}
         <div class="buy_overall">
             <p class="overall-price"><strong>Overall: <span class="price prod-currency">{{price}}</span></strong></p>
@@ -60,5 +76,19 @@
     {{/if}}
 </div>
 
+
+<script>
+    let selectedSize = Array.from(document.getElementsByClassName("selected_size"))
+    let optionSize = Array.from(document.getElementsByClassName("option_size"))
+
+    for (let i = 0; i < selectedSize.length; i++) {
+        for (let j = 0; j < optionSize.length; j++) {
+            if (optionSize[j].value == selectedSize[i].dataset.size) {
+                optionSize[j].selected = true
+                console.log(optionSize[j])
+            }
+        }
+    }
+</script>
 
 
