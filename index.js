@@ -10,6 +10,7 @@ const varMiddleware = require('./middleware/variables')
 const csrf = require('csurf')
 const flash = require('connect-flash')
 const userMiddleware = require('./middleware/user')
+const errorPage = require('./middleware/error')
 const keys = require('./keys')
 
 const homeRoutes = require('./routes/home')
@@ -59,6 +60,7 @@ app.use('/auth', authRouter)
 app.use('/about' ,aboutRouter)
 app.use('/orders' ,ordersRouter)
 
+app.use(errorPage)
 
 
 const PORT = process.env.PORT || 3000

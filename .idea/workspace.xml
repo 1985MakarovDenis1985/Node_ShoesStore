@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d5d5f8e-18f9-4c22-b5ef-10f5f0bfae86" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/middleware/error.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/404.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/add.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/product.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/product.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +81,7 @@
       <workItem from="1609842822982" duration="2606000" />
       <workItem from="1610791479541" duration="4379000" />
       <workItem from="1614330387012" duration="9469000" />
-      <workItem from="1614851601587" duration="17346000" />
+      <workItem from="1614851601587" duration="20454000" />
     </task>
     <servers />
   </component>
@@ -95,5 +99,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added function &quot;Search&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="added function &quot;Search&quot;" />
   </component>
 </project>

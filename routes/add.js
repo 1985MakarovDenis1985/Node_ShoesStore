@@ -15,7 +15,7 @@ router.get('/', auth, (req, res, next) => {
 
 router.post('/', auth, newProductValidation, async (req, res) => {
    const errors = validationResult(req)
-    console.log(req.body)
+    // console.log(req.body.size)
     if (!errors.isEmpty()){
         return res.status(422).render('add', {
             title: "Add new product",
