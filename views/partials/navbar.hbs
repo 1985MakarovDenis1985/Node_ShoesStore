@@ -39,6 +39,13 @@
             <ul class="header_nav_bar_right">
 
                 {{#if isAuth}}
+
+                    {{#if isProfile}}
+                        <li class="nav_item nav_item-active"><a href="/profile">Profile</a></li>
+                    {{else}}
+                        <li class="nav_item"><a href="/profile">Profile</a></li>
+                    {{/if}}
+
                     {{#if isCard}}
                         <li class="nav_item nav_item-active" id="nav_item_cart">
                             <a href="/cart">

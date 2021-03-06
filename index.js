@@ -20,6 +20,7 @@ const addRouter = require('./routes/add')
 const aboutRouter = require('./routes/about')
 const cardRouter = require('./routes/cart')
 const ordersRouter = require('./routes/orders')
+const profileRoutes = require('./routes/profile')
 
 
 const app = express()
@@ -59,6 +60,7 @@ app.use('/cart', cardRouter)
 app.use('/auth', authRouter)
 app.use('/about' ,aboutRouter)
 app.use('/orders' ,ordersRouter)
+app.use('/profile', profileRoutes)
 
 app.use(errorPage)
 

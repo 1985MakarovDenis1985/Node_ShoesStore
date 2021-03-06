@@ -1,7 +1,7 @@
 
 @media screen and (max-width: 1024px) {
 
-    .product_box, .add_container, .card-box {
+    .product_box, .add_container, .card-box, .page_404 {
         width: 1024px !important;
     }
 
@@ -11,7 +11,7 @@
 }
 
 @media screen and (max-width: 769px) {
-    .add_container, .product_box, .card-box{
+    .add_container, .product_box, .card-box, .page_404{
         width: 768px !important;
     }
 
@@ -798,4 +798,85 @@ input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:n
 
 .news_of_shoes{
     position: relative!important;
+}
+
+/*404*/
+
+.page_404{
+    margin: auto;
+    width: 1200px;
+    box-sizing: border-box;
+    padding: 1%;
+    padding-top: 5%;
+    margin-bottom: 4%;
+}
+
+.title_404, .desc_404, .link_to_firstPage{
+    text-align: center;
+    font-size: 4rem;
+    font-family: TruenoLt;
+}
+
+.desc_404{
+    font-size: 2rem;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+.link_to_firstPage{
+    font-size: 2rem;
+    margin: auto;
+}
+
+/*PROFILE*/
+
+.profile_container{
+    width: 1200px;
+    margin: auto;
+    box-sizing: border-box;
+    padding-top: 3%;
+    font-family: TruenoLt;
+}
+
+.title_profile{
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+    padding-bottom: 4%;
+}
+
+.profile_desc_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: normal;
+    box-sizing: border-box;
+}
+
+.profile_ava{
+    width: 30%;
+    height: 350px;
+}
+
+.profile_ava_img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.profile_desc{
+    width: 70%;
+    box-sizing: border-box;
+    padding-left: 5%;
+    position: relative;
+}
+
+.btn-change_profile{
+    position: relative !important;
+    margin-left: 2%;
+    padding: 0;
+    right: 0!important;
+}
+.btn-change_profile:hover{
+    box-shadow: -1px 0 #623232, -1px 1px #472424, -2px 1px #613131, -2px 2px #462323, -3px 2px #603030, -3px 3px #452222, -4px 3px #5f2f2f, -4px 4px #442121!important;
+    margin-left: 1% !important;
 }
